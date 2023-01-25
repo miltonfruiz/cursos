@@ -1,0 +1,37 @@
+* {
+  font-family: cursive;
+  font-weight: lighter;
+  color: black;
+}
+
+/*--- Header ---*/
+
+.titulo_header {
+  font-size: 55px;
+}
+.subtitulo_header {
+  color: white;
+  background-color: black;
+}
+.menu {
+  font-size: medium;
+}
+/*--- Main ---*/
+h3 {
+  font-size: larger;
+  font-weight: bold;
+}
+h4 {
+  font-size: larger;
+  font-style: italic;
+  font-weight: bold;
+}
+p {
+  font-size: small;
+}
+div .parrafo_relleno {
+  font-size: medium;
+}
+a {
+  color: blue;
+}
