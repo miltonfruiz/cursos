@@ -1,37 +1,87 @@
 * {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
   font-family: cursive;
   font-weight: lighter;
   color: black;
 }
+/*--------- I N D E X ----------*/
 
 /*--- Header ---*/
-
 .titulo_header {
   font-size: 55px;
+  color: white;
+  text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black,
+    0px -1px 0px black;
 }
+.centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgcont {
+  margin-top: 100px;
+  width: 1000px;
+  height: 200px;
+  border: 1px solid black;
+  background-image: url(../img/design1_image1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .subtitulo_header {
   color: white;
   background-color: black;
-}
-.menu {
-  font-size: medium;
-}
-/*--- Main ---*/
-h3 {
-  font-size: larger;
+  text-align: center;
+  font-size: 23px;
   font-weight: bold;
+  margin-top: 3px;
+  width: 1000px;
+  height: 40px;
 }
-h4 {
-  font-size: larger;
-  font-style: italic;
-  font-weight: bold;
+.logocont {
+  border: 1px solid white;
+  background-image: url(../img/Logo_Mighty_ducks-01.png);
 }
-p {
-  font-size: small;
-}
-div .parrafo_relleno {
-  font-size: medium;
+.active {
+  text-decoration: none;
+  color: black;
 }
 a {
   color: blue;
+}
+.nav-container {
+  width: 300px;
+  height: 100px;
+  padding: 7px;
+  margin-left: 175px;
+}
+nav a {
+  display: block;
+  padding: 25px;
+}
+.left {
+  margin-left: 170px;
+}
+.sectioncont {
+  width: 800px;
+  height: 300px;
+  margin-left: 700px;
+  margin-top: -200px;
+  display: block;
+  margin-left: 175px;
+}
+div h4 {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0px;
+  padding: 3px;
+}
+section p {
+  margin: -5px 5px 15px 30px;
+  padding: 0px;
+  font-size: 20px;
 }
