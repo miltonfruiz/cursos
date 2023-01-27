@@ -6,29 +6,28 @@
   font-weight: lighter;
   color: black;
 }
-/*--------- I N D E X ----------*/
+/*---------------------- I N D E X -----------------------*/
 
-/*--- Header ---*/
+/*---------- Header -----------*/
 .titulo_header {
   font-size: 55px;
-  color: white;
-  text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black,
-    0px -1px 0px black;
-}
-.centrado {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: black;
+  text-shadow: 2px 0px 0px white, 0px 2px 0px white, -2px 0px 0px white,
+    0px -2px 0px white;
+  font-weight: bold;
+  margin-left: 10px;
 }
 .imgcont {
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-left: 150px;
   width: 1000px;
-  height: 200px;
+  height: 180px;
   border: 1px solid black;
   background-image: url(../img/design1_image1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-position-y: -180px;
 }
 
 .subtitulo_header {
@@ -38,6 +37,7 @@
   font-size: 23px;
   font-weight: bold;
   margin-top: 3px;
+  margin-left: 150px;
   width: 1000px;
   height: 40px;
 }
@@ -50,38 +50,86 @@
   color: black;
 }
 a {
-  color: blue;
+  color: rgb(90, 131, 194);
 }
-.nav-container {
-  width: 300px;
-  height: 100px;
-  padding: 7px;
-  margin-left: 175px;
+.contsub {
+  position: relative;
+}
+.logo {
+  width: 100px;
+  position: absolute;
+  left: 950px;
+  bottom: -30px;
+  border: 1px solid black;
+  background-color: white;
+}
+/*---------- Main -----------*/
+.seccont {
+  width: 1000px;
+  height: 200px;
+  margin-top: 0px;
+  margin-left: 150px;
+  display: inline-block;
+  position: relative;
+}
+.navcont {
+  width: 200px;
+  height: 25px;
+  display: inline-block;
 }
 nav a {
   display: block;
-  padding: 25px;
+  margin-left: 20px;
+  margin-top: 40px;
 }
-.left {
-  margin-left: 170px;
+.daycont {
+  width: 700px;
+  height: 200px;
+  display: inline-block;
+  position: absolute;
+  top: 27px;
 }
-.sectioncont {
-  width: 800px;
-  height: 300px;
-  margin-left: 700px;
-  margin-top: -200px;
-  display: block;
-  margin-left: 175px;
-}
-div h4 {
+.h4index {
   font-size: 20px;
   font-weight: bold;
   font-style: italic;
-  margin: 0px;
-  padding: 3px;
+  margin-top: 11px;
 }
-section p {
-  margin: -5px 5px 15px 30px;
-  padding: 0px;
+.pindex {
   font-size: 20px;
+  margin-left: 22px;
+}
+div p {
+  margin-top: -5px;
+}
+/*---------------------- A B O U T -----------------------*/
+
+/*---------- Main -----------*/
+.h4about {
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 11px;
+}
+.pabout {
+  font-size: 16px;
+  margin-left: 22px;
+}
+.infocont {
+  width: 700px;
+  height: 200px;
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+}
+.pcontact {
+  font-size: 16px;
+  margin-left: 22px;
+  margin-bottom: 20px;
+}
+.concont {
+  width: 700px;
+  height: 200px;
+  display: inline-block;
+  position: absolute;
+  top: 50px;
 }
