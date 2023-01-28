@@ -122,6 +122,10 @@ div p {
   position: absolute;
   top: 27px;
 }
+
+/*-------------------- C O N T A C T ---------------------*/
+
+/*---------- Section -----------*/
 .pcontact {
   font-size: 16px;
   margin-left: 22px;
@@ -134,9 +138,6 @@ div p {
   position: absolute;
   top: 50px;
 }
-/*---------------------- A B O U T -----------------------*/
-
-/*---------- Main -----------*/
 .mailcont {
   text-decoration: underline black;
 }

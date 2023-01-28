@@ -12,23 +12,22 @@
 .title_header {
   font-size: 52px;
   color: black;
-  text-shadow: 2px 0px 0px white, 0px 2px 0px white, -2px 0px 0px white,
-    0px -2px 0px white;
   font-weight: bolder;
   font-style: italic;
-  margin-left: 160px;
-  margin-top: 60px;
+  margin-left: 155px;
+  margin-top: 61px;
 }
 .container_header {
-  margin-left: 160px;
+  margin-left: 150px;
   margin-top: 2px;
-  width: 1050px;
-  height: 220px;
-  border: 1px solid black;
-  background-image: url(../img/design1_image2.jpg);
+  width: 1063px;
+  height: 205px;
+  border: 1px solid gray;
+  background-image: url(../img/design1_image1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-position-y: -180px;
 }
 
 nav a {
@@ -36,7 +35,7 @@ nav a {
   border: 2px solid black;
   display: inline-block;
   position: relative;
-  left: 726px;
+  left: 737px;
   bottom: 24px;
   font-size: 21px;
   text-decoration: none;
@@ -50,8 +49,8 @@ nav a {
   -moz-box-shadow: 3px 3px 1px 0px rgba(0, 0, 0, 0.75);
 }
 #home {
-  width: 93px;
-  margin-right: 10px;
+  width: 95px;
+  margin-right: 9px;
 }
 
 #about {
@@ -72,48 +71,83 @@ nav a {
   background-color: white;
   border: 1px solid black;
   text-align: center;
-  font-size: 23px;
+  font-size: 26px;
   font-weight: bold;
+  margin-top: 14px;
   margin-left: -5px;
-  width: 1056px;
-  height: 40px;
+  width: 1067px;
+  height: 44px;
 }
 .section_container {
-  width: 1050px;
+  width: 1063px;
   height: 285px;
   display: inline-block;
   position: relative;
-  left: 162px;
-  bottom: 40px;
+  left: 153px;
+  bottom: 58px;
 }
 .logo_container {
   width: 200px;
   display: inline-block;
-  position: relative;
-  left: 15px;
-  bottom: 4px;
+  position: absolute;
+  left: 9px;
+  bottom: 70px;
 }
 .image_logo {
-  width: 120px;
+  width: 100px;
   border: 2px solid gray;
 }
 .day_container {
-  width: 700px;
+  width: 830px;
   display: inline-block;
-  position: relative;
-  top: 50px;
-  left: 0px;
+  position: absolute;
+  top: 90px;
+  right: 70px;
 }
 .h4index {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: bold;
   font-style: italic;
-  margin-top: 11px;
+  margin-top: 20px;
 }
 .pindex {
-  font-size: 20px;
-  margin-left: 22px;
+  font-size: 21px;
+  font-weight: bolder;
+  margin-left: 25px;
 }
 div p {
   margin-top: -5px;
+}
+/*---------------------- A B O U T -----------------------*/
+
+/*---------- Section -----------*/
+.h4about {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 11px;
+}
+.pabout {
+  font-size: 18px;
+  margin-left: 0px;
+  text-indent: 25px;
+}
+/*-------------------- C O N T A C T ----------------------*/
+
+/*---------- Section -----------*/
+.contact_container {
+  width: 700px;
+  height: 200px;
+  display: inline-block;
+  position: absolute;
+  top: 115px;
+  left: 150px;
+}
+.pcontact {
+  font-size: 18px;
+  margin-left: 22px;
+  margin-bottom: 20px;
+}
+.mailcont {
+  text-decoration: underline black 2px;
+  color: rgb(90, 131, 194);
 }
