@@ -19,10 +19,10 @@
 }
 .imgcont {
   margin-top: 50px;
-  margin-left: 150px;
+  margin-left: 160px;
   width: 1000px;
   height: 180px;
-  border: 1px solid black;
+  border: 2px solid gray;
   background-image: url(../img/design1_image1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +37,7 @@
   font-size: 23px;
   font-weight: bold;
   margin-top: 3px;
-  margin-left: 150px;
+  margin-left: 160px;
   width: 1000px;
   height: 40px;
 }
@@ -58,9 +58,9 @@ a {
 .logo {
   width: 100px;
   position: absolute;
-  left: 950px;
+  left: 960px;
   bottom: -30px;
-  border: 1px solid black;
+  border: 2px solid gray;
   background-color: white;
 }
 /*---------- Main -----------*/
@@ -112,7 +112,8 @@ div p {
 }
 .pabout {
   font-size: 16px;
-  margin-left: 22px;
+  margin-left: 0px;
+  text-indent: 25px;
 }
 .infocont {
   width: 700px;
@@ -132,4 +133,10 @@ div p {
   display: inline-block;
   position: absolute;
   top: 50px;
+}
+/*---------------------- A B O U T -----------------------*/
+
+/*---------- Main -----------*/
+.mailcont {
+  text-decoration: underline black;
 }
