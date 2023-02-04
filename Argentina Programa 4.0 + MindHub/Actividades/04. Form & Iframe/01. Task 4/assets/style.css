@@ -37,6 +37,16 @@ header {
   font-weight: bold;
   font-size: 16px;
 }
+.day_container {
+  border: 5px outset white;
+  background-color: rgb(26, 38, 52);
+  color: white;
+  width: 530px;
+  display: inline-block;
+  position: absolute;
+  top: 290px;
+  left: 100px;
+}
 .nav-container {
   width: 800px;
   height: 120px;
