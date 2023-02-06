@@ -54,7 +54,7 @@
                     placeholder="First Name"
                     required
                   />
-                  <label for="last-name">Last Name</label>
+                  <label for="last-name" class="space">Last Name:</label>
                   <input
                     type="text"
                     name="Last Name"
@@ -73,10 +73,10 @@
                     required
                   />
                 </div>
-                <div>
-                  <label for="city" class="col">City:</label>
+                <div class="col">
+                  <label for="city">City:</label>
                   <input type="text" name="City" id="city" placeholder="City" />
-                  <label for="zip-code" class="col">Zip Code:</label>
+                  <label for="zip-code" class="space">Zip Code:</label>
                   <input
                     type="number"
                     name="Zip Code"
@@ -99,15 +99,16 @@
                     required
                   />
                   <label for="gender" class="col">Gender:</label>
-                  Masculino
+                  Female
                   <input
+                    class="input-gender"
                     type="radio"
                     name="Gender"
                     id="gender"
                     value="M"
                     required
                   />
-                  Femenino
+                  Male
                   <input
                     type="radio"
                     name="Gender"
@@ -164,61 +165,75 @@
               </fieldset>
               <fieldset class="which">
                 <legend>Which elementary school do you live near?</legend>
-                <div>
-                  <label for="closest-school"></label>
+                <div class="small-letter">
                   <input
                     class="input-which"
                     type="radio"
                     name="Closest School"
                     id="aj-katzenmaier"
                     value="AJ Katzenmaier"
-                  />AJ Katzenmaier
+                  />
+                  <label for="closest-school" class="space-check"
+                    >AJ Katzenmaier</label
+                  >
                   <input
-                    class="input-which"
                     type="radio"
                     name="Closest School"
                     id="marjorie-p-hart"
                     value="Marjorie P Hart"
-                  />Marjorie P Hart
+                  />
+                  <label for="closest-school" class="space-check"
+                    >Marjorie P Hart</label
+                  >
                 </div>
-                <div>
+                <div class="small-letter">
                   <input
                     class="input-which"
                     type="radio"
                     name="Closest School"
                     id="greenbay"
                     value="Greenbay"
-                  />Greenbay
+                  />
+                  <label for="closest-school" class="space-check"
+                    >Greenbay</label
+                  >
                   <input
-                    class="input-which"
                     type="radio"
                     name="Closest School"
                     id="north-elementary"
                     value="North Elementary"
-                  />North Elementary
+                  />
+                  <label for="closest-school" class="space-check"
+                    >North Elementary</label
+                  >
                 </div>
-                <div>
+                <div class="small-letter">
                   <input
                     class="input-which"
                     type="radio"
                     name="Closest School"
                     id="howard-a-yeager"
                     value="Howard A Yeager"
-                  />Howard A Yeager
+                  />
+                  <label for="closest-school" class="space-check"
+                    >Howard A Yeager</label
+                  >
                   <input
-                    class="input-which"
                     type="radio"
                     name="Closest School"
                     id="south-elementary"
                     value="South Elementary"
-                  />South Elementary
+                  />
+                  <label for="closest-school" class="space-check"
+                    >South Elementary</label
+                  >
                 </div>
               </fieldset>
               <fieldset class="what">
                 <legend>
-                  What position(s) do you normally play?(check all that apply)
+                  What position(s) do you normally play? (check all that apply)
                 </legend>
-                <div>
+                <div class="small-letter">
                   <label>
                     <input
                       class="input-what"
@@ -230,7 +245,6 @@
                   </label>
                   <label>
                     <input
-                      class="input-what"
                       type="checkbox"
                       name="Position"
                       id="midfield"
@@ -238,7 +252,7 @@
                     />Midfield
                   </label>
                 </div>
-                <div>
+                <div class="small-letter">
                   <label>
                     <input
                       class="input-what"
@@ -261,7 +275,7 @@
               </fieldset>
               <fieldset class="uniform">
                 <legend>Uniform Size:</legend>
-                <div>
+                <div class="small-letter">
                   <label for="uniform-size"></label>
                   <input
                     class="input-uniform"
@@ -271,14 +285,13 @@
                     value="Youth Smal"
                   />Youth Smal
                   <input
-                    class="input-uniform"
                     type="radio"
                     name="Uniform Size"
                     id="medium"
                     value="Medium"
                   />Medium
                 </div>
-                <div>
+                <div class="small-letter">
                   <input
                     class="input-uniform"
                     type="radio"
@@ -294,7 +307,7 @@
                     value="Large"
                   />Large
                 </div>
-                <div>
+                <div class="small-letter">
                   <input
                     class="input-uniform"
                     type="radio"
@@ -303,20 +316,21 @@
                     value="Youth Large"
                   />Youth Large
                   <input
-                    class="input-uniform"
                     type="radio"
                     name="Uniform Size"
-                    id="extre-large"
+                    id="extra-large"
                     value="Extra Large"
                   />Extra Large
                 </div>
-                <input
-                  class="input-uniform"
-                  type="radio"
-                  name="Uniform Size"
-                  id="small"
-                  value="Small"
-                />Small
+                <div class="small-letter">
+                  <input
+                    class="input-uniform"
+                    type="radio"
+                    name="Uniform Size"
+                    id="small"
+                    value="Small"
+                  />Small
+                </div>
               </fieldset>
               <h4 class="permission">Permission to Play</h4>
               <p class="text-permission">
@@ -337,7 +351,7 @@
                 agree to its terms.
               </p>
               <fieldset class="parent">
-                <legend>Parent</legend>
+                <legend></legend>
                 <label for="parent-guardian" class="legend-permision"
                   >Parent/Guardian Signature:</label
                 >
@@ -351,7 +365,7 @@
                 />
               </fieldset>
               <fieldset class="date">
-                <legend>Date</legend>
+                <legend></legend>
                 <label for="date" class="legend-permision">Date:</label>
                 <input
                   class="input-date"

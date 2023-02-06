@@ -388,6 +388,7 @@ h6 {
   border: 10px outset white;
   background-color: rgb(26, 38, 52);
   color: white;
+  border-radius: 5px;
   font-family: "Roboto", sans-serif;
   width: 690px;
   height: 1200px;
@@ -398,9 +399,10 @@ h6 {
 .personal {
   display: inline-block;
   width: 648px;
-  height: 250px;
+  height: 260px;
   margin-left: 10px;
   margin-top: 10px;
+  border-radius: 5px;
 }
 legend {
   margin-left: 30px;
@@ -413,12 +415,11 @@ legend {
   margin-left: 30px;
   font-size: 13px;
 }
+.space {
+  margin-left: 20px;
+}
 .grade {
-  display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  margin-right: 10px;
+  margin: 15px 10px 10px 30px;
   font-size: 13px;
 }
 .input-grade {
@@ -429,40 +430,64 @@ legend {
   font-size: 13px;
 }
 .which {
-  display: block;
   width: 648px;
-  height: 125px;
+  height: 135px;
   margin-left: 10px;
   margin-top: 10px;
-  font-size: 13px;
+  border-radius: 5px;
+}
+.space-check {
+  margin-left: 3px;
 }
 .input-which {
   margin-left: 25px;
   margin-bottom: 15px;
 }
+.small-letter {
+  font-size: 13px;
+}
+#marjorie-p-hart {
+  margin-left: 38px;
+}
+#north-elementary {
+  margin-left: 73px;
+}
+#south-elementary {
+  margin-left: 29px;
+}
 .what {
+  border: 2px solid red;
   display: block;
   width: 648px;
-  height: 100px;
+  height: 105px;
   margin-left: 10px;
   margin-top: 10px;
-  font-size: 13px;
+  border-radius: 5px;
 }
 .input-what {
   margin-left: 25px;
   margin-bottom: 15px;
 }
+#midfield {
+  margin-left: 26px;
+}
 .uniform {
   display: block;
   width: 648px;
-  height: 145px;
+  height: 160px;
   margin-left: 10px;
   margin-top: 10px;
-  font-size: 13px;
+  border-radius: 5px;
 }
 .input-uniform {
   margin-left: 25px;
   margin-bottom: 15px;
+}
+#medium {
+  margin-left: 41px;
+}
+#extra-large {
+  margin-left: 37px;
 }
 .permission {
   margin: 20px;
@@ -475,20 +500,22 @@ legend {
 }
 .parent {
   width: 648px;
-  height: 80px;
+  height: 60px;
   margin-left: 10px;
   margin-top: 10px;
   font-size: 13px;
+  border-radius: 5px;
 }
 .input-parent {
   margin-left: 5px;
 }
 .date {
   width: 648px;
-  height: 80px;
+  height: 60px;
   margin-left: 10px;
   margin-top: 10px;
   font-size: 13px;
+  border-radius: 5px;
 }
 .input-date {
   margin-left: 5px;
@@ -502,4 +529,5 @@ legend {
   border: 5px solid white;
   color: rgb(26, 38, 52);
   font-family: "Roboto", sans-serif;
+  border-radius: 5px;
 }
