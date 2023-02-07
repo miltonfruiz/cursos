@@ -18,7 +18,7 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: sticky;
@@ -39,7 +39,7 @@ header {
 }
 .day_container {
   border: 10px outset white;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   color: white;
   width: 520px;
   height: 220px;
@@ -94,7 +94,7 @@ nav a {
 .h-main {
   width: 1360px;
   height: 140px;
-  background-color: rgb(238, 197, 80);
+  background-color: rgb(255, 211, 105);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +136,7 @@ nav a {
   justify-content: center;
   width: 1360px;
   height: 130px;
-  background-color: rgb(238, 197, 80);
+  background-color: rgb(255, 211, 105);
   font-family: "Roboto", sans-serif;
 }
 /*---------------------- A B O U T -----------------------*/
@@ -144,7 +144,7 @@ nav a {
 /*---------- Header -----------*/
 .text-container {
   border: 10px outset white;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   color: white;
   border-radius: 5px;
   width: 610px;
@@ -188,9 +188,10 @@ nav a {
 /*---------- Header -----------*/
 #img-md {
   width: 150px;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   margin-top: 70px;
   margin-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .p-contact {
   font-size: 13px;
@@ -204,14 +205,14 @@ nav a {
   height: 150px;
   margin-left: 90px;
   margin-top: 70px;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 }
 /*---------------------- G A M E I N F O R M A T I O N -----------------------*/
 
 /*---------- Main -----------*/
 .table-container {
   border: 10px outset white;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   color: white;
   border-radius: 5px;
   color: white;
@@ -221,9 +222,10 @@ nav a {
   position: absolute;
   top: 260px;
   left: 80px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 table {
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   color: white;
   border: 10px outset white;
   width: 650px;
@@ -232,6 +234,7 @@ table {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 th,
 td {
@@ -256,7 +259,7 @@ caption {
 }
 .info-gf {
   border: 10px outset white;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   color: white;
   width: 450px;
   height: 400px;
@@ -266,6 +269,7 @@ caption {
   position: absolute;
   top: 360px;
   left: 840px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .dt-gf {
   margin-top: 20px;
@@ -294,7 +298,7 @@ caption {
   margin-left: 80px;
 }
 .maps-location {
-  background-color: rgb(238, 197, 80);
+  background-color: rgb(255, 211, 105);
   font-size: 25px;
   font-family: "Gilroy", "Roboto", sans-serif;
   font-weight: lighter;
@@ -308,6 +312,7 @@ caption {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 iframe {
   border-radius: 10px;
@@ -320,12 +325,13 @@ iframe {
   margin-left: 60px;
   border: 2px solid white;
   border-radius: 5px;
-  background-color: rgb(249, 227, 163);
+  background-color: rgb(238, 238, 238);
   width: 315px;
   height: 230px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .title-maps {
   margin-bottom: px;
@@ -333,7 +339,7 @@ iframe {
   border-radius: 5px;
   text-align: center;
   width: 300px;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   font-family: "Roboto", sans-serif;
   color: white;
 }
@@ -342,13 +348,14 @@ iframe {
 /*---------- Main -----------*/
 .container-rules {
   border: 10px outset white;
-  background-color: rgb(26, 38, 52);
+  background-color: rgb(34, 40, 49);
   color: white;
   width: 650px;
   height: 950px;
   position: absolute;
   top: 300px;
   left: 345px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .sub-rules {
   margin-top: 40px;
@@ -431,7 +438,7 @@ h6 {
 }
 .active {
   text-decoration: none;
-  color: rgb(238, 197, 80);
+  color: rgb(255, 211, 105);
 }
 
 /*---------------------- R E G I S T R A T I O N -----------------------*/
@@ -439,7 +446,7 @@ h6 {
 /*---------- Main -----------*/
 .form-container {
   border: 1px solid rgb(194, 193, 193);
-  background-color: white;
+  background-color: rgb(238, 238, 238);
   color: rgb(26, 38, 52);
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
@@ -581,8 +588,8 @@ legend {
 .submit {
   width: 70px;
   height: 30px;
-  background-color: rgb(249, 227, 163);
-  border: 1px solid rgb(194, 193, 193);
+  background-color: rgb(255, 211, 105);
+  border: 1px solid white;
   margin-top: 40px;
   margin-left: 320px;
   color: rgb(26, 38, 52);
@@ -604,8 +611,8 @@ select {
 .reset {
   width: 70px;
   height: 30px;
-  background-color: rgb(249, 227, 163);
-  border: 1px solid rgb(194, 193, 193);
+  background-color: rgb(255, 211, 105);
+  border: 1px solid white;
   color: rgb(26, 38, 52);
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
