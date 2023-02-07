@@ -99,69 +99,23 @@
                     required
                   />
                   <label for="gender" class="col">Gender:</label>
-                  Female
-                  <input
-                    class="input-gender"
-                    type="radio"
-                    name="Gender"
-                    id="gender"
-                    value="M"
-                    required
-                  />
-                  Male
-                  <input
-                    type="radio"
-                    name="Gender"
-                    id="gender"
-                    value="F"
-                    required
-                  />
+                  <select name="Gender" id="gender">
+                    <option value="">--Select an option--</option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                    <option value="O">Other</option>
+                  </select>
                 </div>
-                <div class="grade">
-                  <label for="grade">Grade:</label>
-                  <input
-                    class="input-grade"
-                    type="radio"
-                    name="Grade"
-                    id="grade"
-                    value="Pre-School"
-                  />Pre-School
-                  <input
-                    class="input-grade"
-                    type="radio"
-                    name="Grade"
-                    id="1st"
-                    value="1st"
-                  />1st
-                  <input
-                    class="input-grade"
-                    type="radio"
-                    name="Grade"
-                    id="2nd"
-                    value="2nd"
-                  />2nd
-                  <input
-                    class="input-grade"
-                    type="radio"
-                    name="Grade"
-                    id="3rd"
-                    value="3rd"
-                  />3rd
-                  <input
-                    class="input-grade"
-                    type="radio"
-                    name="Grade"
-                    id="4st"
-                    value="4st"
-                  />4st
-                  <input
-                    class="input-grade"
-                    type="radio"
-                    name="Grade"
-                    id="5th"
-                    value="5th"
-                  />5th
-                </div>
+                <label for="grade" class="col">Grade:</label>
+                <select name="Grade" id="grade">
+                  <option value="">--Select an option--</option>
+                  <option value="Pre-School">Pre-School</option>
+                  <option value="1st">1st</option>
+                  <option value="2bd">2bd</option>
+                  <option value="3rd">3rd</option>
+                  <option value="4th">4th</option>
+                  <option value="5th">5th</option>
+                </select>
               </fieldset>
               <fieldset class="which">
                 <legend>Which elementary school do you live near?</legend>
@@ -234,62 +188,61 @@
                   What position(s) do you normally play? (check all that apply)
                 </legend>
                 <div class="small-letter">
-                  <label>
-                    <input
-                      class="input-what"
-                      type="checkbox"
-                      name="Position"
-                      id="forward"
-                      value="Forward"
-                    />Forward
-                  </label>
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="Position"
-                      id="midfield"
-                      value="Midfield"
-                    />Midfield
-                  </label>
+                  <input
+                    class="input-what"
+                    type="checkbox"
+                    name="Position"
+                    id="forward"
+                    value="Forward"
+                  />
+                  <label class="space-check">Forward</label>
+                  <input
+                    type="checkbox"
+                    name="Position"
+                    id="midfield"
+                    value="Midfield"
+                  />
+                  <label class="space-check">Midfield</label>
                 </div>
                 <div class="small-letter">
-                  <label>
-                    <input
-                      class="input-what"
-                      type="checkbox"
-                      name="Position"
-                      id="defense"
-                      value="Defense"
-                    />Defense
-                  </label>
-                  <label>
-                    <input
-                      class="input-what"
-                      type="checkbox"
-                      name="Position"
-                      id="goalkeeper"
-                      value="Goalkeeper"
-                    />Goalkeeper
-                  </label>
+                  <input
+                    class="input-what"
+                    type="checkbox"
+                    name="Position"
+                    id="defense"
+                    value="Defense"
+                  />
+                  <label class="space-check">Defense</label>
+                  <input
+                    class="input-what"
+                    type="checkbox"
+                    name="Position"
+                    id="goalkeeper"
+                    value="Goalkeeper"
+                  />
+                  <label class="space-check">Goalkeeper</label>
                 </div>
               </fieldset>
               <fieldset class="uniform">
                 <legend>Uniform Size:</legend>
                 <div class="small-letter">
-                  <label for="uniform-size"></label>
                   <input
                     class="input-uniform"
                     type="radio"
                     name="Uniform Size"
                     id="youth-smal"
                     value="Youth Smal"
-                  />Youth Smal
+                  />
+                  <label for="uniform-size" class="space-check"
+                    >Youth Smal</label
+                  >
                   <input
                     type="radio"
                     name="Uniform Size"
                     id="medium"
                     value="Medium"
-                  />Medium
+                  />
+                  <label for="uniform-size" class="space-check">Medium</label>
                 </div>
                 <div class="small-letter">
                   <input
@@ -298,14 +251,18 @@
                     name="Uniform Size"
                     id="youth-medium"
                     value="Youth Medium"
-                  />Youth Medium
+                  />
+                  <label for="uniform-size" class="space-check"
+                    >Youth Medium</label
+                  >
                   <input
                     class="input-uniform"
                     type="radio"
                     name="Uniform Size"
                     id="large"
                     value="Large"
-                  />Large
+                  />
+                  <label for="uniform-size" class="space-check">Large</label>
                 </div>
                 <div class="small-letter">
                   <input
@@ -314,13 +271,19 @@
                     name="Uniform Size"
                     id="youth-large"
                     value="Youth Large"
-                  />Youth Large
+                  />
+                  <label for="uniform-size" class="space-check"
+                    >Youth Large</label
+                  >
                   <input
                     type="radio"
                     name="Uniform Size"
                     id="extra-large"
                     value="Extra Large"
-                  />Extra Large
+                  />
+                  <label for="uniform-size" class="space-check"
+                    >Extra Large</label
+                  >
                 </div>
                 <div class="small-letter">
                   <input
@@ -329,7 +292,8 @@
                     name="Uniform Size"
                     id="small"
                     value="Small"
-                  />Small
+                  />
+                  <label for="uniform-size">Small</label>
                 </div>
               </fieldset>
               <h4 class="permission">Permission to Play</h4>
@@ -353,12 +317,12 @@
               <fieldset class="parent">
                 <legend></legend>
                 <label for="parent-guardian" class="legend-permision"
-                  >Parent/Guardian Signature:</label
+                  >Parent / Guardian Signature:</label
                 >
                 <input
                   class="input-parent"
                   type="text"
-                  name="First name"
+                  name="Parent / Guardian"
                   id="parent-guardian"
                   placeholder="Parent / Guardian"
                   required
@@ -375,7 +339,8 @@
                   required
                 />
               </fieldset>
-              <button type="submit" class="submit">Enviar!</button>
+              <button type="submit" class="submit">Submit!</button>
+              <button type="reset" class="reset">Reset</button>
             </form>
           </div>
         </div>
