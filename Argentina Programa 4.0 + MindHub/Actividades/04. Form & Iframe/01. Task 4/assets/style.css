@@ -80,7 +80,6 @@ nav a {
   font-style: normal;
   font-family: "Open Sans", "arial", sans-serif;
 }
-
 /*---------- Main -----------*/
 .main-container {
   display: flex;
@@ -128,6 +127,17 @@ nav a {
 .img-hockey:hover {
   transition: 8.2s;
   transform: translate(15px);
+}
+.p-footer {
+  color: white;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1360px;
+  height: 130px;
+  background-color: rgb(238, 197, 80);
+  font-family: "Roboto", sans-serif;
 }
 /*---------------------- A B O U T -----------------------*/
 
@@ -220,25 +230,24 @@ table {
   height: 400px;
   margin-left: 15px;
   text-align: center;
-  font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
 }
 th,
 td {
-  font-size: 17px;
+  font-size: 14px;
   border: 1px solid white;
 }
 caption {
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-left: 15px;
   font-style: italic;
 }
 .h-schedule {
-  font-size: 24px;
+  font-size: 17px;
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
   margin-top: 20px;
@@ -274,6 +283,60 @@ caption {
   color: rgb(238, 197, 80);
   text-decoration: none;
 }
+.maps {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 900px;
+  width: 1200px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+.maps-location {
+  background-color: rgb(238, 197, 80);
+  font-size: 25px;
+  font-family: "Gilroy", "Roboto", sans-serif;
+  font-weight: lighter;
+  color: white;
+  width: 1061px;
+  height: 80px;
+  position: absolute;
+  top: 900px;
+  left: 142px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+iframe {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.container-maps {
+  margin-top: 30px;
+  margin-left: 60px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: rgb(249, 227, 163);
+  width: 315px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title-maps {
+  margin-bottom: px;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+  background-color: rgb(26, 38, 52);
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
 /*---------------------- R U L E S -----------------------*/
 
 /*---------- Main -----------*/
@@ -283,7 +346,6 @@ caption {
   color: white;
   width: 650px;
   height: 950px;
-  background-color: rgb(26, 38, 52);
   position: absolute;
   top: 300px;
   left: 345px;
@@ -371,16 +433,7 @@ h6 {
   text-decoration: none;
   color: rgb(238, 197, 80);
 }
-.p-footer {
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1360px;
-  height: 130px;
-  background-color: rgb(238, 197, 80);
-  font-family: "Roboto", sans-serif;
-}
+
 /*---------------------- R E G I S T R A T I O N -----------------------*/
 
 /*---------- Main -----------*/
@@ -391,7 +444,7 @@ h6 {
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
   width: 690px;
-  height: 1200px;
+  height: 1150px;
   position: absolute;
   top: 300px;
   left: 350px;
