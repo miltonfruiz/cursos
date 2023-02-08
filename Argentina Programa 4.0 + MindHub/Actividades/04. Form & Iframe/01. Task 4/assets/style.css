@@ -101,6 +101,7 @@ nav a {
   color: white;
   font-size: 55px;
   font-family: "Gilroy", "Roboto", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 .p-main {
   width: 500px;
@@ -120,9 +121,9 @@ nav a {
   position: absolute;
   top: 270px;
   left: 850px;
-  box-shadow: rgba(238, 197, 80, 0.4) 5px 5px, rgba(238, 197, 80, 0.3) 10px 10px,
-    rgba(238, 197, 80, 0.2) 15px 15px, rgba(238, 197, 80, 0.1) 20px 20px,
-    rgba(238, 197, 80, 0.5) 25px 25px;
+  box-shadow: rgb(255, 211, 105, 0.4) 5px 5px,
+    rgba(255, 211, 105, 0.3) 10px 10px, rgba(255, 211, 105, 0.2) 15px 15px,
+    rgba(255, 211, 105, 0.1) 20px 20px, rgba(255, 211, 105, 0.5) 25px 25px;
 }
 .img-hockey:hover {
   transition: 8.2s;
@@ -205,7 +206,7 @@ nav a {
   height: 150px;
   margin-left: 90px;
   margin-top: 70px;
-  box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /*---------------------- G A M E I N F O R M A T I O N -----------------------*/
 
@@ -312,7 +313,7 @@ caption {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 iframe {
   border-radius: 10px;
@@ -355,7 +356,8 @@ iframe {
   position: absolute;
   top: 300px;
   left: 345px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .sub-rules {
   margin-top: 40px;
@@ -455,6 +457,8 @@ h6 {
   position: absolute;
   top: 300px;
   left: 350px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .personal {
   border: 1px solid rgb(194, 193, 193);
