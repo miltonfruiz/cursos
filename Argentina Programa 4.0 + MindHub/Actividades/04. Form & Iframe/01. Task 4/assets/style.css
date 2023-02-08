@@ -52,6 +52,10 @@ header {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+.day_container:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
 .h4index {
   font-size: 16px;
   font-weight: bold;
@@ -89,7 +93,7 @@ nav a {
   background-position: center;
   width: 1360px;
   height: 1470px;
-  transition: 18.2s;
+  transition: 28.2s;
 }
 .h-main {
   width: 1360px;
@@ -126,8 +130,8 @@ nav a {
     rgba(255, 211, 105, 0.1) 20px 20px, rgba(255, 211, 105, 0.5) 25px 25px;
 }
 .img-hockey:hover {
-  transition: 8.2s;
-  transform: translate(15px);
+  transition: 1s;
+  transform: translate(-50px);
 }
 .p-footer {
   color: white;
@@ -149,7 +153,7 @@ nav a {
   color: white;
   border-radius: 5px;
   width: 610px;
-  height: 325px;
+  height: 340px;
   display: inline-block;
   position: absolute;
   top: 270px;
@@ -157,6 +161,10 @@ nav a {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.text-container:hover {
+  transition: 1s;
+  transform: scale(1.2);
 }
 .dt-about {
   font-size: 22px;
@@ -237,10 +245,19 @@ table {
   font-weight: lighter;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+table:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
 th,
 td {
   font-size: 14px;
   border: 1px solid white;
+}
+tr:hover {
+  background-color: rgb(255, 211, 105);
+  color: rgb(34, 40, 49);
+  cursor: pointer;
 }
 caption {
   font-size: 13px;
@@ -285,8 +302,15 @@ caption {
 }
 .mail-gf,
 .tel-gf {
-  color: rgb(238, 197, 80);
   text-decoration: none;
+}
+.tel-gf:hover {
+  cursor: pointer;
+  color: rgb(255, 211, 105);
+}
+.mail-gf:hover {
+  cursor: pointer;
+  color: rgb(255, 211, 105);
 }
 .maps {
   display: flex;
@@ -355,9 +379,13 @@ iframe {
   height: 950px;
   position: absolute;
   top: 300px;
-  left: 345px;
+  left: 360px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.container-rules:hover {
+  transition: 1s;
+  transform: scale(1.2);
 }
 .sub-rules {
   margin-top: 40px;
@@ -374,7 +402,7 @@ h6 {
 .dt-rules {
   font-size: 18px;
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-left: 30px;
   font-family: "Roboto", sans-serif;
 }
@@ -592,13 +620,19 @@ legend {
 .submit {
   width: 70px;
   height: 30px;
-  background-color: rgb(255, 211, 105);
-  border: 1px solid white;
+  background-color: rgb(26, 38, 52);
+  border: 2px solid white;
   margin-top: 40px;
   margin-left: 320px;
-  color: rgb(26, 38, 52);
+  color: white;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
+}
+.submit:hover {
+  border: 2px solid white;
+  background-color: rgb(255, 211, 105);
+  color: white;
+  cursor: pointer;
 }
 input {
   border: 1px solid rgb(194, 193, 193);
@@ -615,10 +649,16 @@ select {
 .reset {
   width: 70px;
   height: 30px;
-  background-color: rgb(255, 211, 105);
+  background-color: rgb(26, 38, 52);
   border: 1px solid white;
-  color: rgb(26, 38, 52);
+  color: white;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
   margin-left: 210px;
+}
+.reset:hover {
+  border: 2px solid white;
+  background-color: rgb(255, 211, 105);
+  color: white;
+  cursor: pointer;
 }
