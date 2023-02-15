@@ -1,0 +1,48 @@
+header {
+    background-image: url(/images/background-image.jpg);
+    background-size: cover;
+    height: 600px;
+}
+
+.logo {
+    margin-top: 10px;
+    background-color: black;
+    width: 150px;
+    opacity: 0.8;
+}
+
+.dropdown, .init {
+    margin-top: 10px;
+}
+
+.box {
+    margin: 100px;
+    color: white;
+}
+
+main {
+    background-color: black;
+    color: white;
+}
+
+section {
+    border-top: 5px solid gray;
+    border-bottom: 5px solid gray;
+    padding: 2rem 0;
+}
+
+.accordion {
+    background-color: black;
+    color: white;
+    margin: 2rem 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 2rem 0;
+}
+
+.container a{
+    color: white;
+}
