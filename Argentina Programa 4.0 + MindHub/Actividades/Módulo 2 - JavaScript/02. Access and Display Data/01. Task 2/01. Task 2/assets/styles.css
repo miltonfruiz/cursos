@@ -1,0 +1,98 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*---------------------- I N D E X -----------------------*/
+
+/*---------- Header -----------*/
+nav a {
+  text-decoration: none;
+}
+.logo-ae {
+  border-radius: 4px;
+  border: 1px solid rgb(204, 119, 119);
+}
+.btn {
+  font-size: 13px;
+}
+label {
+  font-size: 13px;
+}
+.form-control {
+  font-size: 13px;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 25px;
+}
+.card-scale :hover {
+  transition: 1s;
+  transform: scale(1.02);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 100px;
+}
+main {
+  position: relative;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  bottom: 395px;
+}
+.carousel-item {
+  height: 458px;
+}
+.forms-container {
+  border: 1px solid rgb(221, 221, 221);
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+table {
+  border: 2px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.vacia {
+  height: 24px;
+}
+th {
+  text-align: center;
+  background-color: rgb(221, 221, 221);
+  color: black;
+  font-weight: lighter;
+  font-size: 17px;
+  height: 30px;
+}
+td {
+  text-align: center;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 13px;
+  height: 24px;
+}
+.insta :hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.face :hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.wsp :hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.title {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.pie {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.buscador {
+  position: relative;
+  left: 10px;
+}
