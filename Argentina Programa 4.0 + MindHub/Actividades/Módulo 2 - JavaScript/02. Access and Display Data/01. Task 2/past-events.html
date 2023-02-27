@@ -32,7 +32,7 @@
             src="./assets/logo-amazing-events.png"
             alt="logo-ae"
             width="90"
-            class="logo-ae bg-light p-1"
+            class="logo-ae p-1"
           />
         </div>
         <div class="col text-center p-3">
@@ -76,7 +76,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div
-              class="title row container-title text-center p-1 bg-body-tertiary"
+              class="title row container-title text-center p-3 bg-body-tertiary"
             >
               <h1>Past Events</h1>
             </div>
@@ -154,90 +154,14 @@
                 </div>
               </div>
             </div>
-            <div class="container text-center mt-4">
-              <div class="row">
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/food.jpg"
-                      class="card-img-top"
-                      alt="img-food"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Food Fair</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/museum.jpg"
-                      class="card-img-top"
-                      alt="img-museum"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Museum Tour</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/concert.jpg"
-                      class="card-img-top"
-                      alt="img-concert"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Music Concert</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/party.jpg"
-                      class="card-img-top"
-                      alt="img-party"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Costume Party</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div
+              class="d-flex flex-wrap m-5 mt-0 row"
+              id="container-past"
+            ></div>
           </div>
           <div class="carousel-item">
             <div
-              class="title row container-title text-center p-1 bg-body-tertiary"
+              class="title row container-title text-center p-3 bg-body-tertiary"
             >
               <h1>Contact</h1>
             </div>
@@ -281,75 +205,77 @@
           </div>
           <div class="carousel-item">
             <div
-              class="title row container-title text-center p-1 bg-body-tertiary"
+              class="title row container-title text-center p-3 bg-body-tertiary"
             >
               <h1>Stats</h1>
             </div>
-            <table class="container mt-5 col-8">
-              <caption></caption>
-              <thead>
-                <tr>
-                  <th colspan="3">Events Statistics</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Events with the highest percentage of attendance</td>
-                  <td>Events with the lowest percentage of attendance</td>
-                  <td>Event with larger capacity</td>
-                </tr>
-                <tr>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                </tr>
-                <tr>
-                  <th colspan="3">Upcoming Events Statistics by Category</th>
-                </tr>
-                <tr>
-                  <td>Categories</td>
-                  <td>Revenues</td>
-                  <td>Percentage of attendance</td>
-                </tr>
-                <tr>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                </tr>
-                <tr>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                </tr>
-                <tr>
-                  <th colspan="3">Past Events Statistics by Category</th>
-                </tr>
-                <tr>
-                  <td>Categories</td>
-                  <td>Revenues</td>
-                  <td>Percentage of attendance</td>
-                </tr>
-                <tr>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                </tr>
-                <tr>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                </tr>
-                <tr>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                  <td class="vacia"></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-container mb-3">
+              <table class="container mt-5 col-8">
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th colspan="3">Events Statistics</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Events with the highest percentage of attendance</td>
+                    <td>Events with the lowest percentage of attendance</td>
+                    <td>Event with larger capacity</td>
+                  </tr>
+                  <tr class="empty">
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                  </tr>
+                  <tr>
+                    <th colspan="3">Upcoming Events Statistics by Category</th>
+                  </tr>
+                  <tr>
+                    <td>Categories</td>
+                    <td>Revenues</td>
+                    <td>Percentage of attendance</td>
+                  </tr>
+                  <tr class="empty">
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                  </tr>
+                  <tr class="empty">
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                  </tr>
+                  <tr>
+                    <th colspan="3">Past Events Statistics by Category</th>
+                  </tr>
+                  <tr>
+                    <td>Categories</td>
+                    <td>Revenues</td>
+                    <td>Percentage of attendance</td>
+                  </tr>
+                  <tr class="empty">
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                  </tr>
+                  <tr class="empty">
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                  </tr>
+                  <tr class="empty">
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                    <td class="vacia"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="carousel-item">
             <div
-              class="title row container-title text-center p-1 bg-body-tertiary"
+              class="title row container-title text-center p-3 bg-body-tertiary"
             >
               <h1>Home</h1>
             </div>
@@ -427,90 +353,14 @@
                 </div>
               </div>
             </div>
-            <div class="container text-center mt-4">
-              <div class="row">
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/food.jpg"
-                      class="card-img-top"
-                      alt="img-food"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Food Fair</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/museum.jpg"
-                      class="card-img-top"
-                      alt="img-museum"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Museum Tour</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/concert.jpg"
-                      class="card-img-top"
-                      alt="img-concert"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Music Concert</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/party.jpg"
-                      class="card-img-top"
-                      alt="img-party"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Costume Party</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div
+              class="d-flex flex-wrap m-5 mt-0 row"
+              id="container-home"
+            ></div>
           </div>
           <div class="carousel-item">
             <div
-              class="title row container-title text-center p-1 bg-body-tertiary"
+              class="title row container-title text-center p-3 bg-body-tertiary"
             >
               <h1>Upcoming Events</h1>
             </div>
@@ -588,89 +438,14 @@
                 </div>
               </div>
             </div>
-            <div class="container text-center mt-4">
-              <div class="row">
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/food.jpg"
-                      class="card-img-top"
-                      alt="img-food"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Food Fair</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/museum.jpg"
-                      class="card-img-top"
-                      alt="img-museum"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Museum Tour</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/concert.jpg"
-                      class="card-img-top"
-                      alt="img-concert"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Music Concert</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-scale col me-2">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="./assets/party.jpg"
-                      class="card-img-top"
-                      alt="img-party"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Costume Party</h5>
-                      <p class="card-text">Texto descriptivo</p>
-                      <a
-                        href="./details.html"
-                        target="_blank"
-                        class="btn btn-outline-danger ms-5"
-                        >Go somewhere</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div
+              class="d-flex flex-wrap m-5 mt-0 row"
+              id="container-upcoming"
+            ></div>
           </div>
         </div>
         <button
+          id="past-boton-prev"
           class="carousel-control-prev"
           type="button"
           data-bs-target="#carousel-container"
@@ -683,6 +458,7 @@
           <span class="visually-hidden">Previous</span>
         </button>
         <button
+          id="past-boton-next"
           class="carousel-control-next"
           type="button"
           data-bs-target="#carousel-container"
@@ -733,5 +509,8 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/home.js"></script>
+    <script src="./assets/upcoming.js"></script>
+    <script src="./assets/past.js"></script>
   </body>
 </html>

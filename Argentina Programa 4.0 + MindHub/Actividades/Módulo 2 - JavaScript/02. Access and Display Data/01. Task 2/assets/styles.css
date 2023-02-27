@@ -8,12 +8,19 @@
 
 /*---------- Header -----------*/
 
+header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
 nav a {
   text-decoration: none;
 }
 .logo-ae {
-  border-radius: 4px;
-  border: 1px solid rgb(204, 119, 119);
+  border-radius: 1px;
+  box-shadow: white 0px 30px 60px -12px inset, white 0px 18px 36px -18px inset;
 }
 .btn {
   font-size: 13px;
@@ -28,7 +35,14 @@ label {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-left: 25px;
 }
-.card-scale :hover {
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.card-scale:hover {
   transition: 1s;
   transform: scale(1.02);
 }
@@ -39,19 +53,19 @@ label {
 main {
   position: relative;
 }
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  bottom: 395px;
-}
+
 .carousel-item {
-  height: 458px;
+  height: auto;
 }
 .forms-container {
   border: 1px solid rgb(221, 221, 221);
   width: 500px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+/*---------------------- S T A T S -----------------------*/
+
+/*---------- Main -----------*/
+
 table {
   border: 2px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -59,6 +73,16 @@ table {
 .vacia {
   height: 24px;
 }
+
+/* .table-container:hover {
+  transition: 1s;
+  transform: scale(1.05);
+} */
+.empty:hover {
+  background-color: rgb(255, 83, 103);
+  cursor: pointer;
+}
+
 th {
   text-align: center;
   background-color: rgb(221, 221, 221);
@@ -73,6 +97,9 @@ td {
   font-size: 13px;
   height: 24px;
 }
+
+/*---------- Footer -----------*/
+
 .insta :hover {
   transition: 1s;
   transform: scale(1.2);
@@ -91,11 +118,90 @@ td {
 }
 .pie {
   position: relative;
-  top: 65px;
+  top: 50px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
+
 .buscador {
   position: relative;
   left: 10px;
+}
+.descripction-img {
+  font-size: 12px;
+}
+.mini-cards:hover {
+  transition: 1s;
+  transform: scale(1.02);
+}
+.card-img {
+  width: 215px;
+  height: 138px;
+}
+.card {
+  width: 223px;
+  height: 317px;
+}
+.card-title {
+  font-size: 15px;
+}
+.card-description {
+  font-size: 11px;
+}
+.details-boton {
+  position: absolute;
+  left: 60px;
+  top: 268px;
+}
+
+#home-boton-prev,
+#home-boton-next,
+#upcoming-boton-prev,
+#upcoming-boton-next,
+#past-boton-prev,
+#past-boton-next,
+#contact-boton-prev,
+#contact-boton-next,
+#stats-boton-prev,
+#stats-boton-next {
+  position: absolute;
+  top: 26px;
+  bottom: auto;
+}
+.details-card {
+  width: 1000px;
+  height: 200px;
+}
+.container-details-card {
+  border-radius: 10px;
+  border: 2px solid red;
+  width: 700px;
+  height: 350px;
+}
+.container-details-card:hover {
+  transition: 1s;
+  transform: scale(1.05);
+}
+.card-text-description {
+  font-size: 13px;
+}
+.price-logo,
+.name-logo,
+.category-logo {
+  width: 30px;
+  margin-right: 5px;
+}
+.date-logo {
+  width: 22px;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+.place-logo {
+  width: 15px;
+  margin-right: 5px;
+  margin-left: 4px;
+}
+.capacity-logo {
+  width: 25px;
+  margin-right: 10px;
 }
