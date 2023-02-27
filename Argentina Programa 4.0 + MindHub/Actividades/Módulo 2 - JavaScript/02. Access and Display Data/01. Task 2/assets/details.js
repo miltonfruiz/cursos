@@ -487,7 +487,7 @@ function detailsCards(arrayDatos, id) {
           <p class="card-text-description m-3 text-center">${objectDetails.events[event].description}</p>
         </div>
         <div class="col">
-          <div class="card-body">
+          <div class="card-body mt-4 ms-3">
             <p class="card-text-details m-3"><img src="./assets/category.png" alt="logo-category" class="category-logo">Category: ${objectDetails.events[event].category}</p>
             <p class="card-text-details m-3"><img src="./assets/date.png" alt="logo-date" class="date-logo"> Date: ${objectDetails.events[event].date}</p>
             <p class="card-text-details m-3"><img src="./assets/place.png" alt="logo-place" class="place-logo"> Place: ${objectDetails.events[event].place}</p>

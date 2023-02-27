@@ -174,9 +174,10 @@ td {
 }
 .container-details-card {
   border-radius: 10px;
-  border: 2px solid red;
+  border: 1px solid rgb(221, 221, 221);
   width: 700px;
   height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container-details-card:hover {
   transition: 1s;
@@ -191,6 +192,7 @@ td {
   width: 30px;
   margin-right: 5px;
 }
+
 .date-logo {
   width: 22px;
   margin-left: 2px;
@@ -198,10 +200,29 @@ td {
 }
 .place-logo {
   width: 15px;
-  margin-right: 5px;
+  margin-right: 10px;
   margin-left: 4px;
 }
 .capacity-logo {
   width: 25px;
   margin-right: 10px;
+}
+.assistance-logo {
+  width: 20px;
+  margin-right: 13px;
+}
+.details-footer {
+  margin-top: 80px;
+}
+.card-text-details {
+  font-size: 15px;
+}
+.home-footer {
+  margin-top: 67px;
+}
+.upcoming-footer,
+.past-footer,
+.contact-footer,
+.stats-footer {
+  margin-top: 72px;
 }
