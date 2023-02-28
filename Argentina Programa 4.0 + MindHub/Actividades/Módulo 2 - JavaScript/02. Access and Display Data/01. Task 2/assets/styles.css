@@ -42,7 +42,7 @@ label {
 }
 .card-scale:hover {
   transition: 1s;
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -210,12 +210,12 @@ td {
   margin-right: 13px;
 }
 .details-footer {
-  margin-top: 80px;
+  margin-top: 0px;
 }
 .card-text-details {
   font-size: 15px;
 }
-.home-footer {
+/* .home-footer {
   margin-top: 67px;
 }
 .upcoming-footer,
@@ -223,7 +223,7 @@ td {
 .contact-footer,
 .stats-footer {
   margin-top: 72px;
-}
+} */
 .carousel-control-prev-icon:hover {
   transition: 1s;
   transform: scale(1.2);
