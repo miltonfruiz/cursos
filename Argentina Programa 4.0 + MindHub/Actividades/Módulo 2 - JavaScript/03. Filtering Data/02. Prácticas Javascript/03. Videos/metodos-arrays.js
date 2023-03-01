@@ -33,7 +33,7 @@ console.log(numerosPorDos);
 
 let numerosFilter = [2, 6, 9, 10, 13, 21];
 
-let numerosFiltrados = numeros.filter((numero) => numero >= 10);
+let numerosFiltrados = numerosFilter.filter((numero) => numero >= 10);
 console.log(numerosFiltrados);
 
 //----------------------------------------------------
