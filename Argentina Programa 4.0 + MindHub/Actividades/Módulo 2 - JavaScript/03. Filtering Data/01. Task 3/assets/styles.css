@@ -232,3 +232,16 @@ td {
   transition: 1s;
   transform: scale(1.2);
 }
+#finder-container {
+  font-size: 12px;
+}
+.search-boton:hover {
+  transition: 1s;
+  translate: 5px;
+}
+a:hover {
+  transition: 1s;
+  translate: 3px;
+  transform: scale(1);
+  box-shadow: white 0px 3px 8px;
+}
