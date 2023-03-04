@@ -82,8 +82,8 @@
             </div>
             <div class="container text-center">
               <div class="row">
-                <div class="col-6 mt-3 ms-5">
-                  <div class="form-check form-check-inline p-3">
+                <div class="col-8 mt-3">
+                  <div class="form-check form-check-inline p-3 ms-4">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -94,7 +94,7 @@
                       >Food Fair</label
                     >
                   </div>
-                  <div class="form-check form-check-inline p-2">
+                  <div class="form-check form-check-inline p-3 ms-1">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -102,10 +102,10 @@
                       value="option2"
                     />
                     <label class="form-check-label" for="homeCheckbox2"
-                      >Category</label
+                      >Museum</label
                     >
                   </div>
-                  <div class="form-check form-check-inline p-3">
+                  <div class="form-check form-check-inline p-3 ms-1">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -113,10 +113,10 @@
                       value="option2"
                     />
                     <label class="form-check-label" for="homeCheckbox3"
-                      >Category</label
+                      >Concert</label
                     >
                   </div>
-                  <div class="form-check form-check-inline p-3">
+                  <div class="form-check form-check-inline p-3 ms-1">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -124,10 +124,10 @@
                       value="option2"
                     />
                     <label class="form-check-label" for="homeCheckbox4"
-                      >Category</label
+                      >Race</label
                     >
                   </div>
-                  <div class="form-check form-check-inline p-3">
+                  <div class="form-check form-check-inline p-3 ms-1">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -135,11 +135,33 @@
                       value="option2"
                     />
                     <label class="form-check-label" for="homeCheckbox5"
-                      >Category</label
+                      >Books</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline p-3 ms-1">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="homeCheckbox6"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="homeCheckbox6"
+                      >Cinema</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline p-3 ms-1">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="homeCheckbox6"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="homeCheckbox6"
+                      >Party</label
                     >
                   </div>
                 </div>
-                <div class="col-5 mt-3 ms-4">
+                <div class="col-4 mt-3 search-container">
                   <form
                     id="form-container"
                     class="buscador d-flex p-3"
@@ -147,22 +169,23 @@
                   >
                     <input
                       id="finder-container"
-                      class="form-control me-2"
+                      class="form-control"
                       type="text"
-                      placeholder="Card title search . . ."
+                      placeholder="Search event . . ."
                       aria-label="Search"
                     />
-                    <button class="btn btn-outline-danger search-boton">
-                      Search
+                    <button id="search-boton" class="btn">
+                      <img
+                        src="./assets/lupa.png"
+                        alt="logo-lupa"
+                        class="lupa"
+                      />
                     </button>
                   </form>
                 </div>
               </div>
             </div>
-            <div
-              class="d-flex flex-wrap m-5 mt-0 row"
-              id="home-container"
-            ></div>
+            <div class="m-5 mt-0" id="home-container"></div>
           </div>
           <div class="carousel-item">
             <div
@@ -245,7 +268,7 @@
               </div>
             </div>
             <div
-              class="d-flex flex-wrap m-5 mt-0 row"
+              class="d-flex flex-wrap m-5 mt-0"
               id="container-upcoming"
             ></div>
           </div>

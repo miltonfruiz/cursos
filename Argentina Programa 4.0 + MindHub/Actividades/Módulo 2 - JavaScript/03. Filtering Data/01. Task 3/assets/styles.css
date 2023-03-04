@@ -29,8 +29,14 @@ nav a {
 label {
   font-size: 13px;
 }
+#home-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .form-control {
-  font-size: 13px;
+  font-size: 12px;
+  border-radius: 50px 0px 0px 50px;
+  width: 170px;
 }
 .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -123,7 +129,7 @@ td {
 
 .buscador {
   position: relative;
-  left: 10px;
+  left: 135px;
 }
 .descripction-img {
   font-size: 12px;
@@ -165,6 +171,7 @@ td {
   position: absolute;
   top: 26px;
   bottom: auto;
+  width: 120px;
 }
 .details-card {
   width: 1000px;
@@ -215,15 +222,6 @@ td {
 .card-text-details {
   font-size: 15px;
 }
-/* .home-footer {
-  margin-top: 67px;
-}
-.upcoming-footer,
-.past-footer,
-.contact-footer,
-.stats-footer {
-  margin-top: 72px;
-} */
 .carousel-control-prev-icon:hover {
   transition: 1s;
   transform: scale(1.2);
@@ -232,16 +230,28 @@ td {
   transition: 1s;
   transform: scale(1.2);
 }
-#finder-container {
-  font-size: 12px;
-}
-.search-boton:hover {
-  transition: 1s;
-  translate: 5px;
+
+#finder-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 4px;
 }
 a:hover {
   transition: 1s;
-  translate: 3px;
   transform: scale(1);
   box-shadow: white 0px 3px 8px;
+}
+.lupa {
+  width: 20px;
+}
+#search-boton {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 0px 50px 50px 0px;
+  width: 50px;
+  filter: brightness(100%);
+}
+#search-boton:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
 }

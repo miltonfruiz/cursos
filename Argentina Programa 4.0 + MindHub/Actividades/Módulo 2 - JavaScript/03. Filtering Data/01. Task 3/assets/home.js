@@ -469,18 +469,19 @@ const homeObject = {
   ],
 };
 
-//------------------------------------------------------------------- Capturo ----------------------------------------------------------------//
+//------------------------------------------------------------------- Capture ----------------------------------------------------------------//
 
 const homeContainer = document.getElementById("home-container");
 const categoryContainer = document.getElementById("category-container");
 const finderContainer = document.getElementById("finder-container");
 const formContainer = document.getElementById("form-container");
+const searchBoton = document.getElementById("search-boton");
 
 //------------------------------------------------------------------ Home Cards --------------------------------------------------------------//
 
 const homeCards = homeObject.events.map(
   (cards) =>
-    `<div class="card-scale col mt-5">
+    `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
                 <div class="card" style="width: 14rem">
                   <img
                     src="${cards.image}"
@@ -504,25 +505,27 @@ const homeCards = homeObject.events.map(
 let allCards = homeCards.join("");
 homeContainer.innerHTML = allCards;
 
-//------------------------------------------------------------------- Buscador ---------------------------------------------------------------//
+//------------------------------------------------------------------- Busqueda ---------------------------------------------------------------//
 
-formContainer.addEventListener("submit", (event) => {
+formContainer.addEventListener("keyup", (event) => {
   event.preventDefault();
-  let filterCategory = homeObject.events.filter((name) =>
-    name.name.toLowerCase().includes(finderContainer.value.toLowerCase())
-  );
-  const word = filterCategory.map(
-    (cards) =>
-      `<div class="card-scale col mt-5">
+  if (event.key === "Escape") finderContainer.value = "";
+  if (event.key === "Enter") finderContainer.value === finderContainer;
+  let nameFilter = homeObject.events
+    .filter((parameter) =>
+      parameter.name.toLowerCase().includes(finderContainer.value.toLowerCase())
+    )
+    .map(
+      (card) => `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
                   <div class="card" style="width: 14rem">
                     <img
-                      src="${cards.image}"
+                      src="${card.image}"
                       class="card-img m-1"
                       alt="img-food"
                     />
                     <div class="card-body">
-                      <h5 class="card-title text-center">${cards.name}</h5>
-                      <p class="card-description text-center">${cards.description}</p>
+                      <h5 class="card-title text-center">${card.name}</h5>
+                      <p class="card-description text-center">${card.description}</p>
                       <a
                         href="./details.html"
                         class="btn btn-outline-danger details-boton"
@@ -532,19 +535,20 @@ formContainer.addEventListener("submit", (event) => {
                     </div>
                   </div>
                 </div>`
-  );
-  let cat = word.join("");
-  homeContainer.innerHTML = cat;
+    )
+    .join("");
+  homeContainer.innerHTML = nameFilter;
+  if (!nameFilter) {
+    alert("NADAAAAAAA");
+  }
 });
-
-//--------------------------------------------- Filtrado por Categoria -------------------------------------------------//
 
 //--------------------------------------------------- Buscador -------------------------------------------------------//
 
-// finderContainer.addEventListener("change", () => {
-//   let filterCategory = homeObject.events.filter((category) =>
-//     category.category.includes(finderContainer.value)
-//   );
-//   console.log(filterCategory);
-//   homeContainer.innerHTML = filterCategory;
-// });
+formContainer.addEventListener("submit", (event) => {
+  event.preventDefault();
+  finderContainer.value;
+  finderContainer === finderContainer.value;
+});
+
+//--------------------------------------------- Filtrado por Categoria -------------------------------------------------//
