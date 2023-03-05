@@ -20,8 +20,12 @@ nav a {
 }
 .logo-ae {
   width: 100px;
-  filter: drop-shadow(5px 1px 6px rgb(255, 255, 255));
+  filter: drop-shadow(5px 1px 4px rgb(255, 255, 255));
   border-radius: 1px;
+}
+.logo-ae:hover {
+  transition: 2s;
+  translate: 10px;
 }
 .btn {
   font-size: 13px;

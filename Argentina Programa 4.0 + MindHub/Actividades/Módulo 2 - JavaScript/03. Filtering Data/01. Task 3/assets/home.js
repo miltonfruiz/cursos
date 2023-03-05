@@ -479,29 +479,30 @@ const searchBoton = document.getElementById("search-boton");
 
 //------------------------------------------------------------------ Home Cards --------------------------------------------------------------//
 
-const homeCards = homeObject.events.map(
-  (cards) =>
-    `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
-                <div class="card" style="width: 14rem">
-                  <img
-                    src="${cards.image}"
-                    class="card-img m-1"
-                    alt="img-food"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title text-center">${cards.name}</h5>
-                    <p class="card-description text-center">${cards.description}</p>
-                    <a
-                      href="./details.html"
-                      class="btn btn-outline-danger details-boton"
-                      id="food-boton"
-                      >More Details</a
-                    >
-                  </div>
-                </div>
-              </div>`
-);
+function enabledCard(array) {
+  genericCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+  <div class="card" style="width: 14rem">
+    <img
+      src="${array.image}"
+      class="card-img m-1"
+      alt="img-food"
+    />
+    <div class="card-body">
+      <h5 class="card-title text-center">${array.name}</h5>
+      <p class="card-description text-center">${array.description}</p>
+      <a
+        href="./details.html"
+        class="btn btn-outline-danger details-boton"
+        id="food-boton"
+        >More Details</a
+      >
+    </div>
+  </div>
+</div>`;
+  return genericCard;
+}
 
+const homeCards = homeObject.events.map((cards) => enabledCard(cards));
 let allCards = homeCards.join("");
 homeContainer.innerHTML = allCards;
 
@@ -536,27 +537,7 @@ formContainer.addEventListener("keyup", (event) => {
     .filter((parameter) =>
       parameter.name.toLowerCase().includes(finderContainer.value.toLowerCase())
     )
-    .map(
-      (card) => `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="${card.image}"
-                      class="card-img m-1"
-                      alt="img-food"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title text-center">${card.name}</h5>
-                      <p class="card-description text-center">${card.description}</p>
-                      <a
-                        href="./details.html"
-                        class="btn btn-outline-danger details-boton"
-                        id="food-boton"
-                        >More Details</a
-                      >
-                    </div>
-                  </div>
-                </div>`
-    )
+    .map((card) => cardCreation(card))
     .join("");
   homeContainer.innerHTML = nameFilter;
   if (!nameFilter) {
