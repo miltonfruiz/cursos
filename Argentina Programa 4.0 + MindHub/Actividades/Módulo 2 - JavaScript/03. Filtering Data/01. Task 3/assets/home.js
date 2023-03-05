@@ -475,7 +475,6 @@ const homeContainer = document.getElementById("home-container");
 const categoryContainer = document.getElementById("category-container");
 const finderContainer = document.getElementById("finder-container");
 const formContainer = document.getElementById("form-container");
-const searchBoton = document.getElementById("search-boton");
 
 //------------------------------------------------------------------ Home Cards --------------------------------------------------------------//
 
@@ -537,7 +536,7 @@ formContainer.addEventListener("keyup", (event) => {
     .filter((parameter) =>
       parameter.name.toLowerCase().includes(finderContainer.value.toLowerCase())
     )
-    .map((card) => cardCreation(card))
+    .map((card) => enabledCard(card))
     .join("");
   homeContainer.innerHTML = nameFilter;
   if (!nameFilter) {
