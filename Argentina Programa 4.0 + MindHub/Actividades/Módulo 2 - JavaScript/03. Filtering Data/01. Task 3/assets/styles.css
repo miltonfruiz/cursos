@@ -255,3 +255,11 @@ a:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: rgb(139, 0, 0);
 }
+#error-boton {
+  position: absolute;
+  left: 48px;
+}
+#error-img {
+  object-fit: cover;
+  height: 180px;
+}

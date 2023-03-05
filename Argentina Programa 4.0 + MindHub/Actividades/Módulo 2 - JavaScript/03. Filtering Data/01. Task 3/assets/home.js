@@ -505,7 +505,28 @@ const homeCards = homeObject.events.map(
 let allCards = homeCards.join("");
 homeContainer.innerHTML = allCards;
 
-//------------------------------------------------------------------- Busqueda ---------------------------------------------------------------//
+//------------------------------------------------------------------- Search ---------------------------------------------------------------//
+
+const wrongCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+<div class="card" style="width: 14rem">
+  <img
+    id="error-img"
+    src="./assets/lupa-x.jpg"
+    class="card-img m-1"
+    alt="img-food"
+  />
+  <div class="card-body">
+    <h5 class="card-title text-center">Card Not Found</h5>
+    <p class="card-description text-center"></p>
+    <a
+      href="./index.html"
+      class="btn btn-outline-danger details-boton"
+      id="error-boton"
+      >Return to home</a
+    >
+  </div>
+</div>
+</div>`;
 
 formContainer.addEventListener("keyup", (event) => {
   event.preventDefault();
@@ -539,16 +560,17 @@ formContainer.addEventListener("keyup", (event) => {
     .join("");
   homeContainer.innerHTML = nameFilter;
   if (!nameFilter) {
-    alert("NADAAAAAAA");
+    wrongCard;
+    homeContainer.innerHTML = wrongCard;
   }
 });
-
-//--------------------------------------------------- Buscador -------------------------------------------------------//
 
 formContainer.addEventListener("submit", (event) => {
   event.preventDefault();
   finderContainer.value;
   finderContainer === finderContainer.value;
 });
+
+//--------------------------------------------------- Buscador -------------------------------------------------------//
 
 //--------------------------------------------- Filtrado por Categoria -------------------------------------------------//
