@@ -472,9 +472,11 @@ const homeObject = {
 //------------------------------------------------------------------- Capture ----------------------------------------------------------------//
 
 const homeContainer = document.getElementById("home-container");
-const finderContainer = document.getElementById("finder-container");
-const formContainer = document.getElementById("form-container");
-const categoryContainer = document.getElementById("category-container");
+const finderContainerHome = document.getElementById("finder-container-home");
+const formContainerHome = document.getElementById("form-container-home");
+const categoryContainerHome = document.getElementById(
+  "category-container-home"
+);
 const foodCheckbox = document.getElementById("food-checkbox");
 
 //------------------------------------------------------------------ Home Cards --------------------------------------------------------------//
@@ -528,13 +530,15 @@ const wrongCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
 </div>
 </div>`;
 
-formContainer.addEventListener("keyup", (event) => {
+formContainerHome.addEventListener("keyup", (event) => {
   event.preventDefault();
-  if (event.key === "Escape") finderContainer.value = "";
-  if (event.key === "Enter") finderContainer.value === finderContainer;
+  if (event.key === "Escape") finderContainerHome.value = "";
+  if (event.key === "Enter") finderContainerHome.value === finderContainerHome;
   let nameFilter = homeObject.events
     .filter((parameter) =>
-      parameter.name.toLowerCase().includes(finderContainer.value.toLowerCase())
+      parameter.name
+        .toLowerCase()
+        .includes(finderContainerHome.value.toLowerCase())
     )
     .map((card) => enabledCard(card))
     .join("");
@@ -545,10 +549,10 @@ formContainer.addEventListener("keyup", (event) => {
   }
 });
 
-formContainer.addEventListener("submit", (event) => {
+formContainerHome.addEventListener("submit", (event) => {
   event.preventDefault();
-  finderContainer.value;
-  finderContainer === finderContainer.value;
+  finderContainerHome.value;
+  finderContainerHome === finderContainerHome.value;
 });
 
 //-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//
@@ -574,10 +578,10 @@ homeObject.events.map((parameter) => {
     categories += enableCheckbox(parameter);
   }
 });
-categoryContainer.innerHTML = categories;
+categoryContainerHome.innerHTML = categories;
 
 let activos = [];
-categoryContainer.addEventListener("click", (e) => {
+categoryContainerHome.addEventListener("click", (e) => {
   if (e.target.checked != undefined) {
     if (e.target.checked) {
       let nameFilter = homeObject.events

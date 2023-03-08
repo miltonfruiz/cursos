@@ -1,4 +1,4 @@
-const objectUpcoming = {
+const upcomingObject = {
   currentDate: "2022-09-01",
   events: [
     {
@@ -469,37 +469,113 @@ const objectUpcoming = {
   ],
 };
 
-//---------------------------------------------------- Capturo ---------------------------------------------------------//
+//----------------------------------------------------------------- Capturo ------------------------------------------------------------------//
 
-const containerUpcoming = document.getElementById("container-upcoming");
+const upcomingContainer = document.getElementById("upcoming-container");
+const finderContainerUp = document.getElementById("finder-container-up");
+const formContainerUp = document.getElementById("form-container-up");
+const categoryContainerUp = document.getElementById("category-container-up");
 
-//----------------------------------------------- Upcoming Events Cards -------------------------------------------------//
+//----------------------------------------------------------- Upcoming Events Cards ----------------------------------------------------------//
 
-function upcomingCards(arrayDatos, date) {
-  let cards = "";
-  for (const event in arrayDatos.events) {
-    if (arrayDatos.events[event].date > date) {
-      cards += `<div class="card-scale col mt-5">
-                  <div class="card" style="width: 14rem">
-                    <img
-                      src="${objectUpcoming.events[event].image}"
-                      class="card-img m-1"
-                      alt="img-food"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title text-center">${objectUpcoming.events[event].name}</h5>
-                      <p class="card-description text-center">${objectUpcoming.events[event].description}</p>
-                      <a
-                        href="./details.html"
-                        class="btn btn-outline-danger details-boton"
-                        id="food-boton"
-                        >More Details</a
-                      >
-                    </div>
-                  </div>
-                </div>`;
-    }
-  }
-  return cards;
+function enabledCardUp(array) {
+  genericCardUp = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+  <div class="card" style="width: 14rem">
+    <img
+      src="${array.image}"
+      class="card-img m-1"
+      alt="img-food"
+    />
+    <div class="card-body">
+      <h5 class="card-title text-center">${array.name}</h5>
+      <p class="card-description text-center">${array.description}</p>
+      <a
+        href="./details.html?id=${array._id}"
+        class="btn btn-outline-danger details-boton"
+        id="food-boton"
+        >More Details</a
+      >
+    </div>
+  </div>
+</div>`;
+  return genericCardUp;
 }
-containerUpcoming.innerHTML = upcomingCards(objectUpcoming, "2022-09-01");
+
+const upcomingCards = upcomingObject.events
+  .filter((parameter) => parameter.date > upcomingObject.currentDate)
+  .map((cardUp) => enabledCardUp(cardUp))
+  .join("");
+upcomingContainer.innerHTML = upcomingCards;
+
+//------------------------------------------------------------------ Search ------------------------------------------------------------------//
+
+const wrongCardUp = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+<div class="card" style="width: 14rem">
+  <img
+    id="error-img"
+    src="./assets/lupa-x.jpg"
+    class="card-img m-1"
+    alt="img-food"
+  />
+  <div class="card-body">
+    <h5 class="card-title text-center">Card Not Found</h5>
+    <p class="card-description text-center"></p>
+    <a
+      href="./index.html"
+      class="btn btn-outline-danger details-boton"
+      id="error-boton"
+      >Return to home</a
+    >
+  </div>
+</div>
+</div>`;
+
+formContainerUp.addEventListener("keyup", (event) => {
+  event.preventDefault();
+  if (event.key === "Escape") finderContainerUp.value = "";
+  if (event.key === "Enter") finderContainerUp.value === finderContainerUp;
+  let nameFilter = upcomingObject.events
+    .filter((parameter) =>
+      parameter.name
+        .toLowerCase()
+        .includes(finderContainerUp.value.toLowerCase())
+    )
+    .map((card) => enabledCardUp(card))
+    .join("");
+  upcomingContainer.innerHTML = nameFilter;
+  if (!nameFilter) {
+    wrongCardUp;
+    upcomingContainer.innerHTML = wrongCardUp;
+  }
+});
+
+formContainerUp.addEventListener("submit", (event) => {
+  event.preventDefault();
+  finderContainerUp.value;
+  finderContainerUp === finderContainerUp.value;
+});
+
+//-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//
+
+function enableCheckboxUp(array) {
+  genericCheckbox = `<div class="form-check form-check-inline p-3 ms-2">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="${array.category.toLowerCase()}-checkbox"
+    value="${array.category.toLowerCase()}"
+  />
+  <label class="form-check-label" for="homeCheckbox1"
+    >${array.category}</label
+  >
+</div>`;
+  return genericCheckbox;
+}
+
+let categoriesUp = "";
+upcomingObject.events.map((parameter) => {
+  if (!categoriesUp.includes(parameter.category)) {
+    categoriesUp += enableCheckboxUp(parameter);
+  }
+});
+categoryContainerUp.innerHTML = categoriesUp;
