@@ -34,7 +34,8 @@ label {
   font-size: 13px;
 }
 #home-container,
-#upcoming-container {
+#upcoming-container,
+#past-container {
   display: flex;
   flex-wrap: wrap;
 }

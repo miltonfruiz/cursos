@@ -1,4 +1,4 @@
-const objectPast = {
+const pastObject = {
   currentDate: "2022-09-01",
   events: [
     {
@@ -471,35 +471,113 @@ const objectPast = {
 
 //---------------------------------------------------- Capturo ---------------------------------------------------------//
 
-const containerPast = document.getElementById("container-past");
+const pastContainer = document.getElementById("past-container");
+const finderContainerPast = document.getElementById("finder-container-past");
+const formContainerPast = document.getElementById("form-container-past");
+const categoryContainerPast = document.getElementById(
+  "category-container-past"
+);
 
 //----------------------------------------------- Upcoming Events Cards -------------------------------------------------//
 
-function pastCards(arrayDatos, date) {
-  let cards = "";
-  for (const event in arrayDatos.events) {
-    if (arrayDatos.events[event].date < date) {
-      cards += `<div class="card-scale col mt-5">
-                    <div class="card" style="width: 14rem">
-                      <img
-                        src="${objectPast.events[event].image}"
-                        class="card-img m-1"
-                        alt="img-food"
-                      />
-                      <div class="card-body">
-                        <h5 class="card-title text-center">${objectPast.events[event].name}</h5>
-                        <p class="card-description text-center">${objectPast.events[event].description}</p>
-                        <a
-                          href="./details.html"
-                          class="btn btn-outline-danger details-boton"
-                          id="food-boton"
-                          >More Details</a
-                        >
-                      </div>
-                    </div>
-                  </div>`;
-    }
-  }
-  return cards;
+function enabledCardPast(array) {
+  genericCardUp = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+  <div class="card" style="width: 14rem">
+    <img
+      src="${array.image}"
+      class="card-img m-1"
+      alt="img-food"
+    />
+    <div class="card-body">
+      <h5 class="card-title text-center">${array.name}</h5>
+      <p class="card-description text-center">${array.description}</p>
+      <a
+        href="./details.html?id=${array._id}"
+        class="btn btn-outline-danger details-boton"
+        id="food-boton"
+        >More Details</a
+      >
+    </div>
+  </div>
+</div>`;
+  return genericCardUp;
 }
-containerPast.innerHTML = pastCards(objectPast, "2022-09-01");
+
+const pastCards = pastObject.events
+  .filter((parameter) => parameter.date < pastObject.currentDate)
+  .map((cardUp) => enabledCardPast(cardUp))
+  .join("");
+pastContainer.innerHTML = pastCards;
+
+//------------------------------------------------------------------ Search ------------------------------------------------------------------//
+
+const wrongCardPast = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+<div class="card" style="width: 14rem">
+  <img
+    id="error-img"
+    src="./assets/lupa-x.jpg"
+    class="card-img m-1"
+    alt="img-food"
+  />
+  <div class="card-body">
+    <h5 class="card-title text-center">Card Not Found</h5>
+    <p class="card-description text-center"></p>
+    <a
+      href="./index.html"
+      class="btn btn-outline-danger details-boton"
+      id="error-boton"
+      >Return to home</a
+    >
+  </div>
+</div>
+</div>`;
+
+formContainerPast.addEventListener("keyup", (event) => {
+  event.preventDefault();
+  if (event.key === "Escape") finderContainerPast.value = "";
+  if (event.key === "Enter") finderContainerPast.value === finderContainerPast;
+  let nameFilter = pastObject.events
+    .filter((parameter) =>
+      parameter.name
+        .toLowerCase()
+        .includes(finderContainerPast.value.toLowerCase())
+    )
+    .map((card) => enabledCardPast(card))
+    .join("");
+  pastContainer.innerHTML = nameFilter;
+  if (!nameFilter) {
+    wrongCardPast;
+    pastContainer.innerHTML = wrongCardPast;
+  }
+});
+
+formContainerPast.addEventListener("submit", (event) => {
+  event.preventDefault();
+  finderContainerPast.value;
+  finderContainerPast === finderContainerPast.value;
+});
+
+//-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//
+
+function enableCheckboxPast(array) {
+  genericCheckbox = `<div class="form-check form-check-inline p-3 ms-2">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="${array.category.toLowerCase()}-checkbox"
+    value="${array.category.toLowerCase()}"
+  />
+  <label class="form-check-label" for="homeCheckbox1"
+    >${array.category}</label
+  >
+</div>`;
+  return genericCheckbox;
+}
+
+let categoriesPast = "";
+pastObject.events.map((parameter) => {
+  if (!categoriesPast.includes(parameter.category)) {
+    categoriesPast += enableCheckboxPast(parameter);
+  }
+});
+categoryContainerPast.innerHTML = categoriesPast;
