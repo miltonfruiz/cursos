@@ -472,9 +472,10 @@ const homeObject = {
 //------------------------------------------------------------------- Capture ----------------------------------------------------------------//
 
 const homeContainer = document.getElementById("home-container");
-const categoryContainer = document.getElementById("category-container");
 const finderContainer = document.getElementById("finder-container");
 const formContainer = document.getElementById("form-container");
+const categoryContainer = document.getElementById("category-container");
+const foodCheckbox = document.getElementById("food-checkbox");
 
 //------------------------------------------------------------------ Home Cards --------------------------------------------------------------//
 
@@ -490,7 +491,7 @@ function enabledCard(array) {
       <h5 class="card-title text-center">${array.name}</h5>
       <p class="card-description text-center">${array.description}</p>
       <a
-        href="./details.html"
+        href="./details.html?id=${array._id}"
         class="btn btn-outline-danger details-boton"
         id="food-boton"
         >More Details</a
@@ -501,11 +502,10 @@ function enabledCard(array) {
   return genericCard;
 }
 
-const homeCards = homeObject.events.map((cards) => enabledCard(cards));
-let allCards = homeCards.join("");
-homeContainer.innerHTML = allCards;
+const homeCards = homeObject.events.map((cards) => enabledCard(cards)).join("");
+homeContainer.innerHTML = homeCards;
 
-//------------------------------------------------------------------- Search ---------------------------------------------------------------//
+//------------------------------------------------------------------ Search ------------------------------------------------------------------//
 
 const wrongCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
 <div class="card" style="width: 14rem">
@@ -551,6 +551,62 @@ formContainer.addEventListener("submit", (event) => {
   finderContainer === finderContainer.value;
 });
 
-//--------------------------------------------------- Buscador -------------------------------------------------------//
+//-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//
 
-//--------------------------------------------- Filtrado por Categoria -------------------------------------------------//
+function enableCheckbox(array) {
+  genericCheckbox = `<div class="form-check form-check-inline p-3 ms-2">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="${array.category.toLowerCase()}-checkbox"
+    value="${array.category.toLowerCase()}"
+  />
+  <label class="form-check-label" for="homeCheckbox1"
+    >${array.category}</label
+  >
+</div>`;
+  return genericCheckbox;
+}
+
+let categories = "";
+homeObject.events.map((parameter) => {
+  if (!categories.includes(parameter.category)) {
+    categories += enableCheckbox(parameter);
+  }
+});
+categoryContainer.innerHTML = categories;
+
+let activos = [];
+categoryContainer.addEventListener("click", (e) => {
+  if (e.target.checked != undefined) {
+    if (e.target.checked) {
+      let nameFilter = homeObject.events
+        .filter(
+          (parameter) => parameter.category.toLowerCase() === e.target.value
+        )
+        .map((card) => enabledCard(card))
+        .join("");
+      //let res = activos.push(nameFilter);
+      activos.push(nameFilter);
+    } else {
+      let noactivos = activos.indexOf(activos);
+      if (noactivos != -1) {
+        activos.splice(noactivos, 1);
+      }
+    }
+  }
+  homeContainer.innerHTML = activos.join("");
+});
+
+// const areglo = () => {
+//   let selection = [];
+
+//   categories.map((parameter) => {
+//     let selector = document.getElementById(parameter);
+//     if (selector.checked) {
+//       selection.push(parameter);
+//     }
+//   });
+// };
+
+//-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//

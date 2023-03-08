@@ -469,39 +469,38 @@ const objectDetails = {
   ],
 };
 
-//---------------------------------------------------- Capturo ---------------------------------------------------------//
+//------------------------------------------------------------------- ID Search --------------------------------------------------------------//
 
-const containerDetails = document.getElementById("container-details");
+function detailsCards(array) {
+  genericCardDetails = `<div class="container-details-card mb-3 container">
+  <div class="row">
+    <div class="col">
+      <img src="${array.image}" class="img-fluid rounded-start details-card mt-2" alt="img-logo">
+      <h5 class="card-title-details m-3 text-center"><img src="./assets/name.png" alt="logo-price" class="name-logo">${array.name}</h5>
+      <p class="card-text-description m-3 text-center">${array.description}</p>
+    </div>
+    <div class="col">
+      <div class="card-body mt-4 ms-3">
+        <p class="card-text-details m-3"><img src="./assets/category.png" alt="logo-category" class="category-logo">Category: ${array.category}</p>
+        <p class="card-text-details m-3"><img src="./assets/date.png" alt="logo-date" class="date-logo"> Date: ${array.date}</p>
+        <p class="card-text-details m-3"><img src="./assets/place.png" alt="logo-place" class="place-logo"> Place: ${array.place}</p>
+        <p class="card-text-details m-3"><img src="./assets/price.png" alt="logo-price" class="price-logo">Price: $${array.price}</p>
+        <p class="card-text-details m-3"><img src="./assets/capacity.png" alt="logo-capacity" class="capacity-logo">Capacity: ${array.capacity}</p>
+        <p class="card-text-details m-3"><img src="./assets/assistance.png" alt="logo-assistance" class="assistance-logo">Assistance: ${array.assistance}</p>
+        <p class="card-text m-3"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-//----------------------------------------------- Upcoming Events Cards -------------------------------------------------//
-
-function detailsCards(arrayDatos, id) {
-  let cards = "";
-  for (const event in arrayDatos.events) {
-    if (arrayDatos.events[event]._id === id) {
-      cards += `<div class="container-details-card mb-3 container">
-      <div class="row">
-        <div class="col">
-          <img src="${objectDetails.events[event].image}" class="img-fluid rounded-start details-card mt-2" alt="img-logo">
-          <h5 class="card-title-details m-3 text-center"><img src="./assets/name.png" alt="logo-price" class="name-logo">${objectDetails.events[event].name}</h5>
-          <p class="card-text-description m-3 text-center">${objectDetails.events[event].description}</p>
-        </div>
-        <div class="col">
-          <div class="card-body mt-4 ms-3">
-            <p class="card-text-details m-3"><img src="./assets/category.png" alt="logo-category" class="category-logo">Category: ${objectDetails.events[event].category}</p>
-            <p class="card-text-details m-3"><img src="./assets/date.png" alt="logo-date" class="date-logo"> Date: ${objectDetails.events[event].date}</p>
-            <p class="card-text-details m-3"><img src="./assets/place.png" alt="logo-place" class="place-logo"> Place: ${objectDetails.events[event].place}</p>
-            <p class="card-text-details m-3"><img src="./assets/price.png" alt="logo-price" class="price-logo">Price: $${objectDetails.events[event].price}</p>
-            <p class="card-text-details m-3"><img src="./assets/capacity.png" alt="logo-capacity" class="capacity-logo">Capacity: ${objectDetails.events[event].capacity}</p>
-            <p class="card-text-details m-3"><img src="./assets/assistance.png" alt="logo-assistance" class="assistance-logo">Assistance: ${objectDetails.events[event].assistance}</p>
-            <p class="card-text m-3"><small class="text-muted">Last updated 3 mins ago</small></p>
-            
-          </div>
-        </div>
       </div>
-    </div>`;
-    }
-  }
-  return cards;
+    </div>
+  </div>
+</div>`;
+  return genericCardDetails;
 }
-containerDetails.innerHTML = detailsCards(objectDetails, 1);
+
+const queryString = location.search;
+let params = new URLSearchParams(queryString);
+let extractedId = params.get("id");
+const moreDetails = objectDetails.events.find(
+  (card) => card._id == extractedId
+);
+const containerDetails = document.getElementById("container-details");
+containerDetails.innerHTML = detailsCards(moreDetails);
