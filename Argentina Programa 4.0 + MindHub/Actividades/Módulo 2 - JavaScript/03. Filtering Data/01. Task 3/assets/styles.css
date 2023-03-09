@@ -248,13 +248,37 @@ a:hover {
 .lupa {
   width: 20px;
 }
-#search-boton {
+#search-boton,
+#search-boton-up,
+#search-boton-past,
+#search-boton-lupa {
   border: 1px solid rgb(221, 221, 221);
   border-radius: 0px 50px 50px 0px;
   width: 50px;
   filter: brightness(100%);
 }
 #search-boton:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#search-boton-up:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#search-boton-past:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#search-boton-lupa:hover {
   filter: hue-rotate(1deg) brightness(300%) opacity(60%);
   transition: 1s;
   transform: scale(1);

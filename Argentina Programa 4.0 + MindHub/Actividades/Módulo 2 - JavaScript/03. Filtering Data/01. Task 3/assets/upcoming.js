@@ -579,3 +579,27 @@ upcomingObject.events.map((parameter) => {
   }
 });
 categoryContainerUp.innerHTML = categoriesUp;
+
+let activeUp = [];
+categoryContainerUp.addEventListener("click", (events) => {
+  if (events.target.checked != undefined) {
+    if (events.target.checked) {
+      let create = upcomingObject.events
+        .filter(
+          (argument) => argument.category.toLowerCase() === events.target.value
+        )
+        .map((card) => enabledCardUp(card))
+        .join("");
+      activeUp.push(create);
+      upcomingContainer.innerHTML = create;
+    } else {
+      let inactive = activeUp.indexOf(events.target.value);
+      if (inactive != -1) {
+        activeUp.splice(inactive, 1);
+        upcomingContainer.innerHTML = create;
+      }
+      upcomingContainer.innerHTML = upcomingCards;
+    }
+  }
+  console.log(events);
+});

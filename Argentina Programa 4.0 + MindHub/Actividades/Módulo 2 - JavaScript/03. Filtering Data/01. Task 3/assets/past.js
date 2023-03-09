@@ -581,3 +581,27 @@ pastObject.events.map((parameter) => {
   }
 });
 categoryContainerPast.innerHTML = categoriesPast;
+
+let activePast = [];
+categoryContainerPast.addEventListener("click", (events) => {
+  if (events.target.checked != undefined) {
+    if (events.target.checked) {
+      let create = pastObject.events
+        .filter(
+          (argument) => argument.category.toLowerCase() === events.target.value
+        )
+        .map((card) => enabledCardPast(card))
+        .join("");
+      activePast.push(create);
+      pastContainer.innerHTML = create;
+    } else {
+      let inactive = activePast.indexOf(events.target.value);
+      if (inactive != -1) {
+        activePast.splice(inactive, 1);
+        pastContainer.innerHTML = create;
+      }
+      pastContainer.innerHTML = upcomingCards;
+    }
+  }
+  console.log(events);
+});

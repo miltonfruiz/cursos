@@ -580,37 +580,89 @@ homeObject.events.map((parameter) => {
 });
 categoryContainerHome.innerHTML = categories;
 
-let activos = [];
-categoryContainerHome.addEventListener("click", (e) => {
-  if (e.target.checked != undefined) {
-    if (e.target.checked) {
-      let nameFilter = homeObject.events
+let active = [];
+categoryContainerHome.addEventListener("click", (events) => {
+  if (events.target.checked != undefined) {
+    if (events.target.checked) {
+      let create = homeObject.events
         .filter(
-          (parameter) => parameter.category.toLowerCase() === e.target.value
+          (argument) => argument.category.toLowerCase() === events.target.value
         )
         .map((card) => enabledCard(card))
         .join("");
-      //let res = activos.push(nameFilter);
-      activos.push(nameFilter);
+      active.push(create);
+      homeContainer.innerHTML = create;
     } else {
-      let noactivos = activos.indexOf(activos);
-      if (noactivos != -1) {
-        activos.splice(noactivos, 1);
+      let inactive = active.indexOf(events.target.value);
+      if (inactive != -1) {
+        active.splice(inactive, 1);
+        homeContainer.innerHTML = create;
       }
+      homeContainer.innerHTML = homeCards;
     }
   }
-  homeContainer.innerHTML = activos.join("");
+
+  console.log(events);
 });
 
-// const areglo = () => {
-//   let selection = [];
+// let admEvent = [];
+// finderContainerHome.addEventListener("keyup", () => {
+//   if (activeCategory.length == 0) {
+//     finderEvent = homeObject.events.filter((event) =>
+//       event.name.toLowerCase().includes(finderContainerHome.value.toLowerCase())
+//     );
+//   } else {
+//     finderEvent = admEvent.filter((event) =>
+//       event.name.toLowerCase().includes(finderContainerHome.value.toLowerCase())
+//     );
+//   }
 
-//   categories.map((parameter) => {
-//     let selector = document.getElementById(parameter);
-//     if (selector.checked) {
-//       selection.push(parameter);
+//   homeCards.innerHTML = createCards(finderEvent);
+// });
+
+// let activeCategory = [];
+// let searchActiveEvents = [];
+// categoryContainerHome.addEventListener("click", (event) => {
+//   if (event.target.checked != undefined) {
+//     if (event.target.checked) {
+//       let valor = event.target.value;
+//       if (valor === homeObject.events.category) {
+//         let nameFilter = homeObject.events
+//           .filter((parameter) =>
+//             parameter.category
+//               .toLowerCase()
+//               .includes(finderContainerHome.value.toLowerCase())
+//           )
+//           .map((card) => enabledCard(card))
+//           .join("");
+//         homeContainer.innerHTML = nameFilter;
+//       }
+//     } else {
+//       let inactive = activeCategory.indexOf(event.target.value);
+//       if (inactive != -1) {
+//         activeCategory.splice(inactive, 1);
+//       }
 //     }
-//   });
-// };
-
-//-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//
+//   }
+// });
+//   let activeEvents = [];
+//   for (let category of activeCategory) {
+//     for (let event of homeObject.events) {
+//       if (event.category.toLowerCase().includes(category)) {
+//         activeEvents.push(event);
+//       }
+//     }
+//   }
+//   if (formContainerHome.value == 0) {
+//     homeCards.innerHTML = enabledCard(activeEvents);
+//   } else {
+//     searchActiveEvents = activeEvents.filter((event) =>
+//       event.name.toLowerCase().includes(formContainerHome.value.toLowerCase())
+//     );
+//     homeCards.innerHTML = enabledCard(searchActiveEvents);
+//   }
+//   admEvent = activeEvents.map((event) => event);
+//   if (activeCategory.length === 0) {
+//     homeCards.innerHTML = enabledCard(homeObject.events);
+//   }
+// });
