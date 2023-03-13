@@ -476,17 +476,17 @@ function detailsCards(array) {
   <div class="row">
     <div class="col">
       <img src="${array.image}" class="img-fluid rounded-start details-card mt-2" alt="img-logo">
-      <h5 class="card-title-details m-3 text-center"><img src="./assets/name.png" alt="logo-price" class="name-logo">${array.name}</h5>
+      <h5 class="card-title-details m-3 text-center"><img src="./assets/images/name.png" alt="logo-price" class="name-logo">${array.name}</h5>
       <p class="card-text-description m-3 text-center">${array.description}</p>
     </div>
     <div class="col">
       <div class="card-body mt-4 ms-3">
-        <p class="card-text-details m-3"><img src="./assets/category.png" alt="logo-category" class="category-logo">Category: ${array.category}</p>
-        <p class="card-text-details m-3"><img src="./assets/date.png" alt="logo-date" class="date-logo"> Date: ${array.date}</p>
-        <p class="card-text-details m-3"><img src="./assets/place.png" alt="logo-place" class="place-logo"> Place: ${array.place}</p>
-        <p class="card-text-details m-3"><img src="./assets/price.png" alt="logo-price" class="price-logo">Price: $${array.price}</p>
-        <p class="card-text-details m-3"><img src="./assets/capacity.png" alt="logo-capacity" class="capacity-logo">Capacity: ${array.capacity}</p>
-        <p class="card-text-details m-3"><img src="./assets/assistance.png" alt="logo-assistance" class="assistance-logo">Assistance: ${array.assistance}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/category.png" alt="logo-category" class="category-logo">Category: ${array.category}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/date.png" alt="logo-date" class="date-logo"> Date: ${array.date}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/place.png" alt="logo-place" class="place-logo"> Place: ${array.place}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/price.png" alt="logo-price" class="price-logo">Price: $${array.price}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/capacity.png" alt="logo-capacity" class="capacity-logo">Capacity: ${array.capacity}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/assistance.png" alt="logo-assistance" class="assistance-logo">Assistance: ${array.assistance}</p>
         <p class="card-text m-3"><small class="text-muted">Last updated 3 mins ago</small></p>
 
       </div>
