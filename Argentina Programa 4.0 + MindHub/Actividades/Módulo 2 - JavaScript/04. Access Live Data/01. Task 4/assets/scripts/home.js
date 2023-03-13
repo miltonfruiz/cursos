@@ -513,7 +513,7 @@ const wrongCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
 <div class="card" style="width: 14rem">
   <img
     id="error-img"
-    src="./assets/lupa-x.jpg"
+    src="./assets/images/lupa-x.jpg"
     class="card-img m-1"
     alt="img-food"
   />
