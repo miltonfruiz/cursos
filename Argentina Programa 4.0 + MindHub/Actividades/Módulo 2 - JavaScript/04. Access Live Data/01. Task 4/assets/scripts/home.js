@@ -666,3 +666,33 @@ categoryContainerHome.addEventListener("click", (events) => {
 //     homeCards.innerHTML = enabledCard(homeObject.events);
 //   }
 // });
+
+//----------------------------------------------------------------- Dark Mode ----------------------------------------------------------------//
+
+// localStorage.clear();
+// localStorage.setItem("Nombre", "Milton");
+// localStorage.setItem("Apellido", "Ruiz");
+// const nameLS = localStorage.getItem("Nombre");
+// const apellidoLS = localStorage.getItem("Apellido");
+// console.log("Nombre: ", nameLS);
+// console.log("Apellido: ", apellidoLS);
+// localStorage.removeItem("Apellido");
+// const pruebaLS = localStorage.getItem("Username");
+// console.log("PruebaLS", pruebaLS);
+
+// const nameLS = "Milton";
+// const apellidoLS = "Ruiz";
+// localStorage.setItem("Nombre", nameLS);
+
+// const user = {
+//   nameUser: "Juan",
+//   apellidoUser: "Perez",
+// };
+//localStorage.clear();
+
+localStorage.setItem("homeObject", JSON.stringify(homeObject)); //Almacena
+const gethomeObject = localStorage.getItem("homeObject");
+//console.log(gethomeObject);
+
+const getUserParse = JSON.parse(localStorage.getItem("homeObject")); // Estado original
+console.log(getUserParse);

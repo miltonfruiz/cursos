@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Home</title>
   </head>
-  <body>
+  <body id="body-dark-mode">
     <header class="container-fluid">
       <div class="row container-header bg-secondary">
-        <div class="col ms-5 mt-3">
+        <div class="col text-center pt-3 event-dm">
           <img
             src="./assets/images/logo-amazing-events.png"
             alt="logo-ae"
@@ -35,7 +35,7 @@
             class="logo-ae p-1"
           />
         </div>
-        <div class="col text-center p-3">
+        <div class="col text-center p-3 nav-dm">
           <nav>
             <a
               href="./index.html"
@@ -46,39 +46,45 @@
             <a
               href="./upcoming-events.html"
               id="upcoming-events"
-              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50 inactive-boton"
               >Upcoming Events</a
             >
             <a
               href="./past-events.html"
               id="past-events"
-              class="past-events me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              class="past-events me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50 inactive-boton"
               >Past Events</a
             >
             <a
               href="./contact.html"
               id="contact"
-              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50 inactive-boton"
               >Contact</a
             >
             <a
               href="./stats.html"
               id="stats"
-              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50 inactive-boton"
               >Stats</a
             >
           </nav>
+          <div>
+            <img
+              src="./assets/images/dark-mode.png"
+              alt="logo-dark-mode"
+              width="25"
+              class="img-dark-mode"
+            />
+          </div>
         </div>
       </div>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid mb-5">
       <div id="carousel-container" class="carousel slide row">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div
-              class="title row container-title text-center p-3 bg-body-tertiary"
-            >
-              <h1>Home</h1>
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4">Home</h1>
             </div>
             <div class="container text-center">
               <div class="row">
@@ -112,10 +118,8 @@
             <div class="m-5 mt-0" id="home-container"></div>
           </div>
           <div class="carousel-item">
-            <div
-              class="title row container-title text-center p-3 bg-body-tertiary"
-            >
-              <h1>Upcoming Events</h1>
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4">Upcoming Events</h1>
             </div>
             <div class="container text-center">
               <div class="row">
@@ -149,10 +153,8 @@
             <div class="m-5 mt-0" id="upcoming-container"></div>
           </div>
           <div class="carousel-item">
-            <div
-              class="title row container-title text-center p-3 bg-body-tertiary"
-            >
-              <h1>Past Events</h1>
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="mt-4">Past Events</h1>
             </div>
             <div class="container text-center">
               <div class="row">
@@ -186,12 +188,10 @@
             <div class="d-flex flex-wrap m-5 mt-0" id="past-container"></div>
           </div>
           <div class="carousel-item">
-            <div
-              class="title row container-title text-center p-3 bg-body-tertiary"
-            >
-              <h1>Contact</h1>
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="mt-4">Contact</h1>
             </div>
-            <div class="forms-container container mt-5 mb-1">
+            <div class="forms-container container mt-5 mb-5">
               <div class="mb-3">
                 <label for="name" class="form-label">Name:</label>
                 <input
@@ -230,12 +230,10 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div
-              class="title row container-title text-center p-3 bg-body-tertiary"
-            >
-              <h1>Stats</h1>
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="mt-4">Stats</h1>
             </div>
-            <div class="table-container mb-4">
+            <div class="table-container mb-5">
               <table class="container mt-5 col-8">
                 <caption></caption>
                 <thead>
@@ -328,9 +326,9 @@
         </button>
       </div>
     </main>
-    <footer class="container-fluid home-footer">
-      <div class="pie row container-footer text-center bg-body-tertiary">
-        <div class="col-4 mt-2 ms-4">
+    <footer class="container-fluid mt-4">
+      <div class="row container-footer text-center bg-body-tertiary">
+        <div class="col text-center pt-3 redes">
           <a href="https://www.instagram.com/" target="_blank" class="insta"
             ><img
               src="./assets/images/instagram.png"
@@ -353,7 +351,7 @@
               class="me-3"
           /></a>
         </div>
-        <div class="col">
+        <div class="col text-center cohorte">
           <div class="texto-footer">
             <p class="mt-4">FE01 - TM</p>
           </div>
@@ -369,5 +367,6 @@
     <script src="./assets/scripts/upcoming.js"></script>
     <script src="./assets/scripts/past.js"></script>
     <script src="./assets/scripts/details.js"></script>
+    <script src="./assets/scripts/asincronismo.js"></script>
   </body>
 </html>
