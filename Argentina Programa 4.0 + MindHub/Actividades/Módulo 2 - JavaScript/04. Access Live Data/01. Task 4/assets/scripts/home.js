@@ -482,7 +482,7 @@ const foodCheckbox = document.getElementById("food-checkbox");
 //------------------------------------------------------------------ Home Cards --------------------------------------------------------------//
 
 function enabledCard(array) {
-  genericCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
+  genericCard = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap" >
   <div class="card" style="width: 14rem">
     <img
       src="${array.image}"
@@ -495,7 +495,7 @@ function enabledCard(array) {
       <a
         href="./details.html?id=${array._id}"
         class="btn btn-outline-danger details-boton"
-        id="food-boton"
+        id="details-boton"
         >More Details</a
       >
     </div>
