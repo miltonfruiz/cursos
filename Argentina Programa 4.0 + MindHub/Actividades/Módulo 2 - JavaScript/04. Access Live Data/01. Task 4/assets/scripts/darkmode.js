@@ -1,5 +1,6 @@
 //------------------------------------------------------------------- Capture ----------------------------------------------------------------//
 
+const cardDarkMode = document.getElementById("cardDarkMode");
 const headerDarkMode = document.getElementById("aEvent");
 const navDarkMode = document.getElementById("navas");
 const upcomingDarkMode = document.getElementById("upcoming-events");
@@ -15,7 +16,10 @@ const cohorteDarkmode = document.getElementById("cohorte");
 
 //------------------------------------------------------------------ Dark Mode ---------------------------------------------------------------//
 
+loadMode();
+
 darkModeIcon.addEventListener("click", () => {
+  cardDarkMode.classList.toggle("card-title");
   upcomingDarkMode.classList.toggle("inactive-boton");
   pastDarkMode.classList.toggle("inactive-boton");
   contactDarkMode.classList.toggle("inactive-boton");
@@ -27,4 +31,18 @@ darkModeIcon.addEventListener("click", () => {
   navDarkMode.classList.toggle("navas");
   h1DarkMode.classList.toggle("h1");
   mainDarkmode.classList.toggle("main");
+  storeDarkMode(mainDarkmode.classList.contains("main"));
 });
+
+function loadMode() {
+  let darkMode = localStorage.getItem("main");
+  if (!darkMode) {
+    storeDarkMode("false");
+  } else if ((darkMode = "true")) {
+    mainDarkmode.classList.add("main");
+  }
+}
+
+function storeDarkMode(value) {
+  localStorage.setItem("main", value);
+}
