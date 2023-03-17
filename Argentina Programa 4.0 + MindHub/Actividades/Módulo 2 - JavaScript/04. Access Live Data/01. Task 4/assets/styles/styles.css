@@ -4,8 +4,34 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/*---------------------- D A R K M O D E -----------------------*/
+
+.body-dark-mode {
+  color: white;
+  background-color: #232325;
+  transition: 0.3s ease all;
+}
+.cohorte,
+.redes,
+.aEvent,
+.navas {
+  background-color: #232931;
+  transition: 0.3s ease all;
+}
+.h1,
+.main {
+  background-color: #393e46;
+  transition: 0.3s ease all;
+}
+.inactive-boton {
+  background-color: #55575a;
+  transition: 0.3s ease all;
+}
+
 /*---------------------- I N D E X -----------------------*/
 /*---------- Header -----------*/
+
 .container-header {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -24,7 +50,7 @@ nav a {
 .logo-ae {
   width: 100px;
   margin-right: 200px;
-  filter: drop-shadow(5px 1px 4px rgb(255, 255, 255));
+  filter: drop-shadow(1px 1px 1px rgb(255, 255, 255));
   border-radius: 1px;
 }
 .logo-ae:hover {
@@ -49,11 +75,17 @@ label {
   width: 170px;
 }
 .card {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   margin-left: 25px;
+  width: 223px;
+  height: 317px;
 }
 .card:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  box-shadow: white 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .card-scale:hover {
@@ -158,17 +190,17 @@ td {
   width: 215px;
   height: 138px;
 }
-.card {
-  width: 223px;
-  height: 317px;
-}
 .card-title {
+  color: black;
   font-size: 15px;
 }
 .card-description {
+  color: black;
   font-size: 11px;
 }
 .details-boton {
+  border: 1px solid red;
+  color: red;
   position: absolute;
   left: 60px;
   top: 268px;
@@ -310,33 +342,3 @@ a:hover {
   right: 22px;
   bottom: 22px;
 }
-/*---------------------- D A R K M O D E -----------------------*/
-
-/* #body-dark-mode {
-  color: white;
-  background-color: #232325;
-}
-.details-boton {
-  color: white;
-  border-radius: 5px;
-  border: 1px solid white;
-}
-.cohorte,
-.redes,
-.dm-header,
-.event-dm,
-.nav-dm {
-  background-color: #232931;
-}
-h1,
-main {
-  background-color: #393e46;
-}
-.inactive-boton,
-.card {
-  background-color: #55575a;
-}
-.card:hover {
-  box-shadow: white 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-} */
