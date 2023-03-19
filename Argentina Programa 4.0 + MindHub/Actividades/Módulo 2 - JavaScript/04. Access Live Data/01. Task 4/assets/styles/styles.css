@@ -24,17 +24,16 @@
   background-color: #393e46;
   transition: 0.3s ease all;
 }
-.inactive-boton {
-  background-color: #55575a;
-  transition: 0.3s ease all;
-}
 
 /*---------------------- I N D E X -----------------------*/
 /*---------- Header -----------*/
 
 .container-header {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   height: 65px;
 }
 header {
@@ -45,6 +44,11 @@ header {
   z-index: 1;
 }
 nav a {
+  box-shadow: rgba(168, 159, 159, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   text-decoration: none;
 }
 .logo-ae {
@@ -95,6 +99,11 @@ label {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 main {
   position: relative;
@@ -172,8 +181,11 @@ td {
 }
 .title {
   height: 100px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .buscador {
   position: relative;
@@ -278,7 +290,6 @@ td {
   transition: 1s;
   transform: scale(1.2);
 }
-
 #finder-container:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 4px;
 }
@@ -341,4 +352,13 @@ a:hover {
   position: absolute;
   right: 22px;
   bottom: 22px;
+}
+.category-logo,
+.date-logo,
+.place-logo,
+.price-logo,
+.capacity-logo,
+.assistance-logo,
+.name-logo {
+  filter: drop-shadow(1px 1px 5px rgb(255, 255, 255));
 }
