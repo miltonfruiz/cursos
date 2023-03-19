@@ -5,8 +5,8 @@ let api = "https://mindhub-xj03.onrender.com/api/amazing";
 async function fetchData() {
   try {
     const response = await fetch(api);
-    const homeObject = await response.json();
-    const homeCards = homeObject.events
+    const homeData = await response.json();
+    const homeCards = homeData.events
       .map((cards) => enabledCard(cards))
       .join("");
     homeContainer.innerHTML = homeCards;
@@ -15,7 +15,7 @@ async function fetchData() {
       if (event.key === "Escape") finderContainerHome.value = "";
       if (event.key === "Enter")
         finderContainerHome.value === finderContainerHome;
-      let nameFilter = homeObject.events
+      let nameFilter = homeData.events
         .filter((parameter) =>
           parameter.name
             .toLowerCase()
@@ -36,7 +36,7 @@ async function fetchData() {
       finderContainerHome === finderContainerHome.value;
     });
     let categories = "";
-    homeObject.events.map((parameter) => {
+    homeData.events.map((parameter) => {
       if (!categories.includes(parameter.category)) {
         categories += enableCheckbox(parameter);
       }
@@ -47,7 +47,7 @@ async function fetchData() {
     categoryContainerHome.addEventListener("click", (events) => {
       if (events.target.checked != undefined) {
         if (events.target.checked) {
-          let create = homeObject.events
+          let create = homeData.events
             .filter(
               (argument) =>
                 argument.category.toLowerCase() === events.target.value
