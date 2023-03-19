@@ -2,11 +2,10 @@
 
 let apiUpcoming = "https://mindhub-xj03.onrender.com/api/amazing";
 
-async function fetchDataUp() {
+async function fetchDataUpcoming() {
   try {
     const response = await fetch(apiUpcoming);
     const upcomingData = await response.json();
-
     const upcomingCards = upcomingData.events
       .filter((parameter) => parameter.date > upcomingData.currentDate)
       .map((cardUp) => enabledCardUp(cardUp))
@@ -72,7 +71,7 @@ async function fetchDataUp() {
   }
 }
 
-fetchDataUp();
+fetchDataUpcoming();
 //----------------------------------------------------------------- Capturo ------------------------------------------------------------------//
 
 const upcomingContainer = document.getElementById("upcoming-container");
