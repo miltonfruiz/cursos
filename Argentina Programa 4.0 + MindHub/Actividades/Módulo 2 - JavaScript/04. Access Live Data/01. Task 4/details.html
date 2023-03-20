@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Details</title>
   </head>
-  <body>
+  <body id="body-dark-mode" class="body-dark-mode">
     <header class="container-fluid">
       <div class="row container-header bg-secondary">
-        <div class="col text-center pt-3 event-dm">
+        <div class="col text-center pt-3 aEvent" id="aEvent">
           <img
             src="./assets/images/logo-amazing-events.png"
             alt="logo-ae"
@@ -35,7 +35,7 @@
             class="logo-ae p-1"
           />
         </div>
-        <div class="col text-center p-3">
+        <div class="col text-center p-3 navas" id="navas">
           <nav>
             <a
               href="./index.html"
@@ -70,6 +70,7 @@
           </nav>
           <div>
             <img
+              id="darkmode-icon"
               src="./assets/images/dark-mode.png"
               alt="logo-dark-mode"
               width="25"
@@ -81,13 +82,13 @@
     </header>
     <main class="details-main container-fluid">
       <div class="title row text-center bg-body-tertiary">
-        <h1 class="mt-4">Details</h1>
+        <h1 class="pt-4 h1" id="h1">Details</h1>
       </div>
       <div class="m-5" id="container-details"></div>
     </main>
-    <footer class="container-fluid details-footer">
-      <div class="pie row container-footer text-center bg-body-tertiary">
-        <div class="col-4 mt-2 ms-4">
+    <footer class="container-fluid mt-4">
+      <div class="row container-footer text-center bg-body-tertiary">
+        <div class="col text-center pt-3 redes" id="redes">
           <a href="https://www.instagram.com/" target="_blank" class="insta"
             ><img
               src="./assets/images/instagram.png"
@@ -110,7 +111,7 @@
               class="me-3"
           /></a>
         </div>
-        <div class="col">
+        <div class="col text-center cohorte" id="cohorte">
           <div class="texto-footer">
             <p class="mt-4">FE01 - TM</p>
           </div>
@@ -126,5 +127,6 @@
     <script src="./assets/scripts/upcoming.js"></script>
     <script src="./assets/scripts/past.js"></script>
     <script src="./assets/scripts/details.js"></script>
+    <script src="./assets/scripts/darkmode.js"></script>
   </body>
 </html>
