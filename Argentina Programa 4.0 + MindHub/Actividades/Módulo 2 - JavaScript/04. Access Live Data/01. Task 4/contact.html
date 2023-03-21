@@ -183,30 +183,26 @@
               <h1 class="pt-4 h1" id="h1">Home</h1>
             </div>
             <div class="container text-center">
-              <div class="row">
+              <div class="row row-searcher">
                 <div class="col-8 mt-3">
-                  <div class="" id="category-container-home"></div>
+                  <form id="home-category"></form>
                 </div>
                 <div class="col-4 mt-3 search-container">
-                  <form
-                    id="form-container-home"
-                    class="buscador d-flex p-3"
-                    role="search"
-                  >
-                    <input
-                      id="finder-container-home"
-                      class="form-control"
-                      type="text"
-                      placeholder="Search event . . ."
-                      aria-label="Search"
-                    />
-                    <button id="search-boton" class="btn">
+                  <form id="search-form">
+                    <label>
+                      <input
+                        class="search-input form-control ms-4 mt-2 home-search"
+                        id="search-input"
+                        type="search"
+                        placeholder="Search event..."
+                        aria-label="Search"
+                      />
                       <img
                         src="./assets/images/lupa.png"
-                        alt="logo-lupa"
-                        class="lupa"
+                        alt="img-lupa"
+                        class="lupa-img"
                       />
-                    </button>
+                    </label>
                   </form>
                 </div>
               </div>
@@ -220,28 +216,24 @@
             <div class="container text-center">
               <div class="row">
                 <div class="col-8 mt-3">
-                  <div class="" id="category-container-up"></div>
+                  <form id="upcoming-category"></form>
                 </div>
                 <div class="col-4 mt-3 search-container">
-                  <form
-                    id="form-container-up"
-                    class="buscador d-flex p-3"
-                    role="search"
-                  >
-                    <input
-                      id="finder-container-up"
-                      class="form-control"
-                      type="text"
-                      placeholder="Search event . . ."
-                      aria-label="Search"
-                    />
-                    <button id="search-boton-up" class="btn">
+                  <form id="search-form">
+                    <label>
+                      <input
+                        class="search-input form-control ms-4 mt-2 upcoming-search"
+                        id="search-input"
+                        type="search"
+                        placeholder="Search event..."
+                        aria-label="Search"
+                      />
                       <img
                         src="./assets/images/lupa.png"
-                        alt="logo-lupa"
-                        class="lupa"
+                        alt="img-lupa"
+                        class="lupa-img"
                       />
-                    </button>
+                    </label>
                   </form>
                 </div>
               </div>
