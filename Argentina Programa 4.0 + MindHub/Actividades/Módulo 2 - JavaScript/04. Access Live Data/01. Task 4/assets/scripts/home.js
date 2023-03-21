@@ -6,6 +6,17 @@ async function fetchData() {
   try {
     const response = await fetch(api);
     const homeData = await response.json();
+
+    const homeContainer = document.getElementById("home-container");
+    const finderContainerHome = document.getElementById(
+      "finder-container-home"
+    );
+    const formContainerHome = document.getElementById("form-container-home");
+    const categoryContainerHome = document.getElementById(
+      "category-container-home"
+    );
+    const foodCheckbox = document.getElementById("food-checkbox");
+
     const homeCards = homeData.events
       .map((cards) => enabledCard(cards))
       .join("");
@@ -66,23 +77,13 @@ async function fetchData() {
         }
       }
 
-      console.log(events);
+      console.log(events.target.checked);
     });
   } catch (error) {
     console.log(error);
   }
 }
 fetchData();
-
-//----------------------------------------------------------------- Capture ------------------------------------------------------------------//
-
-const homeContainer = document.getElementById("home-container");
-const finderContainerHome = document.getElementById("finder-container-home");
-const formContainerHome = document.getElementById("form-container-home");
-const categoryContainerHome = document.getElementById(
-  "category-container-home"
-);
-const foodCheckbox = document.getElementById("food-checkbox");
 
 //---------------------------------------------------------------- Home Cards ----------------------------------------------------------------//
 
