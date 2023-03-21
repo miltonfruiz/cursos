@@ -112,16 +112,16 @@ main {
 .carousel-item {
   height: auto;
 }
-.forms-container {
-  border: 1px solid rgb(221, 221, 221);
-  width: 500px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
 /*---------------------- C O N T A C T -----------------------*/
 
 /*---------- Main -----------*/
 .active {
   height: auto;
+}
+.forms-container {
+  border: 1px solid rgb(221, 221, 221);
+  width: 317px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 /*---------- Footer ---------*/
@@ -381,4 +381,8 @@ a:hover {
 }
 .row-searcher {
   margin-top: 15px;
+}
+.input-contact {
+  border-radius: 5px 5px 5px 5px;
+  width: 290px;
 }
