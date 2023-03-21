@@ -1,4 +1,4 @@
-//------------------------------------------------------------------- API --------------------------------------------------------------------//
+//--------------------------------------------------------------------- API -------------------------------------------------------------------//
 
 const apiUpcoming = "https://mindhub-xj03.onrender.com/api/amazing";
 
@@ -15,21 +15,24 @@ async function fetchDataUpcoming() {
       return array;
     }, []);
 
+    //---------------------------------------------------------------- Capture ---------------------------------------------------------------//
     let upcomingContainer = document.getElementById("upcoming-container");
     let upcomingCategory = document.getElementById("upcoming-category");
-
     const searchInput = document.getElementById("search-input");
 
+    //----------------------------------------------------------- Arrays / Variables ---------------------------------------------------------//
     let propertySearch = "";
     let searchFilter = [];
     let checked = [];
     let categoryCheck = [];
 
+    //----------------------------------------------------------------- Search ---------------------------------------------------------------//
     searchInput.addEventListener("keyup", (event) => {
       propertySearch = event.target.value.toLowerCase();
       filterFunction();
     });
 
+    //---------------------------------------------------------------- Check Box -------------------------------------------------------------//
     upcomingCategory.addEventListener("click", (event) => {
       if (event.target.checked) {
         checked.push(event.target.value);
@@ -41,6 +44,7 @@ async function fetchDataUpcoming() {
       filterFunction();
     });
 
+    //------------------------------------------------------------ Rendering Functions -------------------------------------------------------//
     function createCategory(event) {
       let genericCategory = "";
       for (let i of event) {
@@ -52,7 +56,6 @@ async function fetchDataUpcoming() {
       }
       upcomingCategory.innerHTML = genericCategory;
     }
-
     function upcomingCards(arrayData) {
       let upcomingArrayCategory = arrayData.filter(
         (parameter) => parameter.date > upcomingData.currentDate
@@ -81,7 +84,6 @@ async function fetchDataUpcoming() {
       }
       return genericCardUp;
     }
-
     function filterFunction() {
       searchFilter = upcomingData.events.filter(
         (arrayFilter) =>
@@ -152,7 +154,6 @@ async function fetchDataUpcoming() {
         }
       }
     }
-
     createCategory(categoryFiltering);
     filterFunction();
   } catch (error) {
